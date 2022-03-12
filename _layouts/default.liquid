@@ -1,0 +1,48 @@
+{%- assign projects = site.pages | where: 'permalink', '/projects/' -%}
+{%- assign projects = projects[0] -%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% include page_title.liquid %}</title>
+    <meta name="description" content="{{ page.description | default: site.description }}">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+  </head>
+  <body>
+    <main id="site-content">
+      <section class="home">
+        <a href="/"><h1>{{ site.title }}</h1></a>
+          {% if page.layout == "home" %}
+          <div id="about" class="content">
+            {{ content }}
+          </div>
+          {%- endif -%}
+      </section>
+      <section class="images">
+        <a href="/projects/">{{ projects.navtitle | default: projects.title }}</a>
+          {%- if page.layout == "projects" %}
+          <div id="projects">
+            {{ content }}
+          </div>
+          {% elsif page.layout == "project" -%}
+            {% include project_gallery.liquid %}
+          {% endif %}
+      </section>
+      <section class="text">
+        {% if page.layout == "project" %}
+          {{ content }}
+        {% else %}
+          {% include widget.liquid %}
+        {% endif %}
+      </section>
+      <section class="contact">
+        {% include contact.liquid %}
+      </section>
+      <section class="time">
+        {% include time.liquid %}
+      </section>
+    </main>
+    <script src=""></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<ul>
+  {% for project in site.projects %}
+  <li title="{{ project.title }}" data-tags="{% include project_tags.liquid %}">
+    <a href="{{ project.url }}">
+      {% if project.featured %}
+        {% if project.featured.type == "video" %}
+          <!-- Video -->
+        {% else %}
+          {% include image_project.liquid content=project.featured %}
+        {% endif %}
+      {% else %}
+      {{ project.title }}
+      {% endif %}
+    </a>
+  </li>
+  {% endfor %}
+</ul>

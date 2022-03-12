@@ -1,0 +1,36 @@
+title: See, Also
+tagline: Creative design studio
+description: See, Also is a creative studio based in London.
+contact: 
+  - 
+    title: "Instagram"
+    abbr: IG
+    href: "https://www.instagram.com/seealsostudio/"
+  - 
+    title: "Email"
+    href: "mailto: studio@see-also.com"
+
+
+
+collections: 
+  projects: 
+    output: true
+    permalink: /projects/:path/
+    sort_by: year
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
+  - 
+    scope: 
+      path: ""
+      type: "projects"
+    values: 
+      layout: "project"
+
+sass:
+  sass_dir: _sass
+  style: compressed

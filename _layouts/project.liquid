@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<h2>{{ page.title }}</h2> <span class="project__date">{{ page.year }}</span>
+{% if page.tags %}
+<ul class="project__tags">
+  {% for tag in page.tags %}
+  <li>{{ tag }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
+<div class="content project__content"> 
+  {{ content }}
+</div>

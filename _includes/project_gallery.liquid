@@ -1,0 +1,9 @@
+<div class="gallery">
+  <ul class="gallery__inner">
+    {% for media in page.media %}
+    <li class="gallery__item">
+      {% include image_project.liquid content=media %}
+    </li>
+    {% endfor %}
+  </ul>
+</div>
