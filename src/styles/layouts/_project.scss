@@ -1,0 +1,26 @@
+.project {
+  &__content {
+    > * {
+      margin-top: 0;
+    }
+  }
+  
+  &__header {
+    display: flex;
+  }
+
+  &__date {
+    &::before {
+      content: ", ";
+    }
+  }
+
+  &__tags {
+    display: flex;
+    > *:not(:first-child) {
+      &::before {
+        content: ", "
+      }
+    }
+  }
+}

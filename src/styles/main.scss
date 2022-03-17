@@ -1,0 +1,14 @@
+@use "common/reset";
+@use "common/variables";
+
+@use "../../node_modules/swiper/swiper";
+@use "../../node_modules/swiper/modules/effect-fade/effect-fade";
+@use "../../node_modules/swiper/modules/navigation/navigation";
+
+@use "components/gallery";
+
+@use "common/global";
+
+@use "layouts/projects";
+@use "layouts/project";
+@use "layouts/contact";
