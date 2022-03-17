@@ -1,0 +1,61 @@
+#projects {
+  .section__title {
+    &:hover {
+      filter: invert(1);
+      mix-blend-mode: difference;
+    }
+
+    &::before {
+      content: "(";
+    }
+
+    &::after {
+      content: ")";
+    }
+  }
+
+  .section__content[data-barba-namespace="projects"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-top: 0;
+  }
+}
+
+.projects {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  &__item {
+    --size: 5em;
+
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    top: max(calc(0 * var(--size)), calc(((100% - var(--size))/ 100) * var(--top)));
+    left: max(calc(0 * var(--size)), calc(((100% - var(--size))/ 100) * var(--left)));
+
+    &:not([style]) {
+      display: none;
+    }
+
+    > a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+
+    &:not(:hover) {
+      mix-blend-mode: luminosity;
+    }
+  }
+}

@@ -1,0 +1,3 @@
+{% for item in site.contact -%}
+<a class="section__title" href="{{ item.href }}" target="_blank" title="{{ item.title }}">{{ item.abbr | default: item.title }}</a>
+{% endfor -%}

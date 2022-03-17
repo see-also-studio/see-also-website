@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="project">
+
+  {% include project_gallery.liquid %}
+
+  <div class="content project__content">
+    <div class="project__header">
+      <h2 class="project__title">{{ page.title }}</h2>
+      <span class="project__date">{{ page.year }}</span>
+    </div>
+    {% if page.tags %}
+    <ul class="project__tags">
+      {% for tag in page.tags %}
+      <li>{{ tag }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+    {{ content }}
+  </div>
+
+</div>

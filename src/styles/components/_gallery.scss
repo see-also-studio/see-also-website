@@ -1,0 +1,17 @@
+.gallery {
+  &__inner {
+    overflow: hidden;
+  }
+
+  &__wrapper {
+    align-items: flex-end;
+  }
+
+  &__item {
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+  }
+}

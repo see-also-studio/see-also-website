@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<ul class="projects">
+  {% for project in site.projects %}
+  <li class="projects__item" 
+    title="{{ project.title }}" 
+    data-tags="{% include project_tags.liquid %}"
+    style="--left: {% include random.liquid min=1 max=100 %}; --top: {% include random.liquid min=1 max=100 %};">
+    <a href="{{ project.url }}">
+      {% if project.featured %}
+        {% if project.featured.type == "video" %}
+          <!-- Video -->
+        {% else %}
+          {% include image_project.liquid content=project.featured %}
+        {% endif %}
+      {% else %}
+      {{ project.title }}
+      {% endif %}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
