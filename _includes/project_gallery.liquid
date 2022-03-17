@@ -1,9 +1,11 @@
-<div class="gallery">
-  <ul class="gallery__inner">
-    {% for media in page.media %}
-    <li class="gallery__item">
-      {% include image_project.liquid content=media %}
-    </li>
-    {% endfor %}
-  </ul>
+<div class="project__gallery gallery">
+  <div class="gallery__inner">
+    <ul class="gallery__wrapper swiper-wrapper">
+      {% for media in page.media %}
+      <li class="gallery__item swiper-slide">
+        {% include image_project.liquid content=media %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
