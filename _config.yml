@@ -10,8 +10,6 @@ contact:
     title: "Email"
     href: "mailto: studio@see-also.com"
 
-
-
 collections: 
   projects: 
     output: true
@@ -31,6 +29,5 @@ defaults:
     values: 
       layout: "project"
 
-sass:
-  sass_dir: _sass
-  style: compressed
+keep_files: ["/dist/"]
+safe: true
