@@ -1,12 +1,11 @@
 {
   "name": "see-also-website",
   "version": "1.0.0",
-  "description": "Run local server with auto reload ``` bundle exec jekyll serve --livereload ```",
+  "description": "",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config src/webpack.config.js",
-    "watch": "webpack --watch --config src/webpack.config.js"
+    "build": "webpack --config src/webpack.prod.js",
+    "watch": "webpack --watch --config src/webpack.dev.js"
   },
   "author": "See, Also",
   "license": "ISC",
@@ -18,9 +17,11 @@
     "mini-css-extract-plugin": "^2.6.0",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
+    "sass-mq": "^6.0.0",
     "style-loader": "^3.3.1",
     "swiper": "^8.0.7",
     "webpack": "^5.70.0",
-    "webpack-cli": "^4.9.2"
+    "webpack-cli": "^4.9.2",
+    "webpack-merge": "^5.8.0"
   }
 }
