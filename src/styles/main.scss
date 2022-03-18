@@ -3,9 +3,9 @@
 @use "common/mq-settings";
 @use "common/variables";
 
-@use "../../node_modules/swiper/swiper";
-@use "../../node_modules/swiper/modules/effect-fade/effect-fade";
-@use "../../node_modules/swiper/modules/navigation/navigation";
+@use "swiper";
+@use "modules/effect-fade/effect-fade";
+@use "modules/navigation/navigation";
 
 @use "components/gallery";
 
