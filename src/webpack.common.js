@@ -20,6 +20,7 @@ module.exports = {
             options: {
               sassOptions: {
                 includePaths: [
+                  'node_modules/sass-mq',
                   'node_modules/swiper',
                 ],
                 // outputStyle: 'compressed',
