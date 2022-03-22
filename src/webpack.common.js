@@ -23,7 +23,6 @@ module.exports = {
                   'node_modules/sass-mq',
                   'node_modules/swiper',
                 ],
-                // outputStyle: 'compressed',
               },
               implementation: require.resolve('sass'),
             },
