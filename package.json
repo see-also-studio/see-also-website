@@ -12,6 +12,7 @@
   "devDependencies": {
     "@barba/core": "^2.9.7",
     "animejs": "^3.2.1",
+    "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
     "gsap": "^3.9.1",
     "mini-css-extract-plugin": "^2.6.0",
