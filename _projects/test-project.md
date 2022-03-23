@@ -6,18 +6,32 @@ tags:
   - Tag 2
   - Tag 3
 featured: 
-  href: "/OSIRIS_Mars_true_color.jpg"
+  href: "projects/test-project/OSIRIS_Mars_true_color.jpg"
   alt: ""
-  height: "2205"
-  width: "2205"
+  height: 2205
+  width: 2205
 media: 
-  - 
-    href: "Gas_Giants_&_The_Sun_in_1,000_km.jpg"
+# Each entry must list file name (excluding file type/extention), file extention (eg. jpg, jpeg, png, gif), height and width, alt text (optional)
+# -
+#   href: "dir-name/filename"
+#   extention: "jpg"
+#   height: 800
+#   width: 600
+#   alt: ""
+  -
+    href: "projects/test-project/Jupiter_and_its_shrunken_Great_Red_Spot.jpg"
+    height: 940
+    width: 940
     alt: ""
-    height: "1608"
-    width: "3000"
   - 
-    href: "Uranus2.jpg"
+    href: "projects/test-project/Gas_Giants_&_The_Sun_in_1,000_km.jpg"
+    height: 1608
+    width: 3000
+    alt: ""
+  - 
+    href: "projects/test-project/Uranus2.jpg"
+    height: 1720
+    width: 1720
     alt: ""
 ---
 [Other project](/projects/test-project-2/)
