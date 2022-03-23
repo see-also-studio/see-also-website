@@ -30,4 +30,5 @@ defaults:
       layout: "project"
 
 keep_files: ["/dist/"]
+exclude: ["gulpfile.js", "README.md", "package.json", "package-lock.json", "/src/"]
 safe: true
