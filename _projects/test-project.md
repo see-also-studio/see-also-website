@@ -5,6 +5,7 @@ tags:
   - Tag 1
   - Tag 2
   - Tag 3
+color: "#726326"
 featured: 
   href: "projects/test-project/OSIRIS_Mars_true_color.jpg"
   alt: ""
