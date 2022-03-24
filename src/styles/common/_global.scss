@@ -227,8 +227,25 @@ body[data-view="projects"] {
 }
 
 body[data-view="project"] {
-  main {
-    grid-template-rows: 0fr 0fr auto 0fr 0fr;
+  section#projects {
+    display: flex;
+    gap: var(--gap-vertical);
+    flex-direction: column;
+
+    .section__content-wrapper {
+      position: relative;
+      flex-grow: 1;
+      min-height: 10em;
+      margin: 2em 0;
+    }
+
+    .gallery {
+      position: absolute;
+      top: 0;
+      left: 0; 
+      right: 0;
+      bottom: 0;
+    }
   }
 
   .widget {
