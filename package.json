@@ -5,15 +5,22 @@
   "private": true,
   "scripts": {
     "build": "webpack --config src/webpack.prod.js",
-    "watch": "webpack --watch --config src/webpack.dev.js"
+    "watch": "webpack --watch --config src/webpack.dev.js",
+    "images": "gulp"
   },
   "author": "See, Also",
   "license": "ISC",
   "devDependencies": {
     "@barba/core": "^2.9.7",
     "animejs": "^3.2.1",
+    "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
     "gsap": "^3.9.1",
+    "gulp": "^4.0.2",
+    "gulp-image-resize": "^0.13.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "imagemin-mozjpeg": "^9.0.0",
     "mini-css-extract-plugin": "^2.6.0",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",

@@ -1,9 +1,42 @@
-{%- if project.path -%}
-  {%- assign path = project.path -%}
-{% else %}
-  {%- assign path = page.path -%}
+{%- if include.content.href  -%}
+  {%- assign hrefSplit = include.content.href | split: "." -%}
+  {%- assign fileExt = hrefSplit | last | prepend: "." -%}
+  {%- assign arrayLength = hrefSplit | size | minus: 1 -%}
+  {%- assign fileName = hrefSplit | slice: 0, arrayLength | join: "." -%}
+  {%- if fileExt == ".jpg" or fileExt == ".jpeg" or fileExt == ".png" or fileExt == ".gif"  -%}
+    <img alt="{{ include.content.alt }}"
+      sizes = "(max-width: 659px) 60vw, 40vw"
+      {%- assign setWidth = 640 -%}
+      {% if include.content.width > setWidth %}
+        srcset="/dist-images/{{ fileName }}-{{ setWidth}}{{ fileExt }} {{ setWidth}}w
+        {%- assign setWidth = 768 -%}
+        {%- if include.content.width > setWidth -%}
+          , /dist-images/{{ fileName }}-{{ setWidth}}{{ fileExt }} {{ setWidth}}w
+        {%- endif -%}
+        {%- assign setWidth = 1024 -%}
+        {%- if include.content.width > setWidth -%}
+          , /dist-images/{{ fileName }}-{{ setWidth}}{{ fileExt }} {{ setWidth}}w
+        {%- endif -%}
+        {%- assign setWidth = 1366 -%}
+        {%- if include.content.width > setWidth -%}
+          , /dist-images/{{ fileName }}-{{ setWidth}}{{ fileExt }} {{ setWidth}}w
+        {%- endif -%}
+        {%- assign setWidth = 1600 -%}
+        {%- if include.content.width > setWidth -%}
+          , /dist-images/{{ fileName }}-{{ setWidth}}{{ fileExt }} {{ setWidth}}w
+        {%- endif -%}
+        "
+      {% endif %}
+      src="/assets/{{ include.content.href }}" 
+      {% if include.content.height %}height="{{ include.content.height }}"{% endif %}
+      {% if include.content.height %}width="{{ include.content.width }}"{% endif %}
+      loading="lazy">
+  {%- elsif fileExt = ".mp4" -%}
+    <video src="{{ include.content.href }}"
+      type="video/mp4"
+      alt="include.content.alt"
+      autoplay muted preload>
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+  {%- endif -%}
 {%- endif -%}
-<img src="/assets/projects/{{ path | split:"/" | last | split:"." | first }}/{{ include.content.href }}" 
-  alt="{{ include.content.alt }}"
-  {% if include.content.height %}height="{{ include.content.height }}"{% endif %}
-  {% if include.content.height %}width="{{ include.content.width }}"{% endif %}>
