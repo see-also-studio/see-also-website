@@ -34,9 +34,13 @@
 
     position: absolute;
     width: var(--size);
-    height: var(--size);
+    height: calc(var(--size) * 1.14);
     top: max(calc(0 * var(--size)), calc(((100% - var(--size))/ 100) * var(--top)));
     left: max(calc(0 * var(--size)), calc(((100% - var(--size))/ 100) * var(--left)));
+
+    border-radius: 50%;
+    background: var(--project-color);
+    filter: blur(0.45em);
 
     &:not([style]) {
       display: none;
