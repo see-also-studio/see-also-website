@@ -31,8 +31,8 @@ a {
 
 main {
   display: grid;
-  row-gap: 0.75em;
-  column-gap: 10vw;
+  row-gap: var(--gap-vertical);
+  column-gap: 6.5vw;
   counter-reset: page-section 0;
   min-height: 100%;
   padding: var(--page-margin);
@@ -48,7 +48,8 @@ main {
 
   @include mq.mq($from: small) {
     grid-template-rows: 0fr auto 0fr;
-    grid-template-columns: minmax(0, 3fr) 1fr; // Minmax fixes issue with swiper gallery not knowing column width
+    grid-template-columns: minmax(0, 3fr) auto; // Minmax fixes issue with swiper gallery not knowing column width
+    padding: var(--page-margin) ;
   }
 }
 
@@ -62,7 +63,7 @@ section {
   }
 
   @include mq.mq($from: small) {
-    padding-left: 10vw;
+    padding-left: 13.5vw;
   }
 
   &::before {
@@ -72,6 +73,10 @@ section {
     top: 0;
     content: counter(page-section);
     z-index: 5;
+
+    @include mq.mq($from: small) {
+      left: 3vw;
+    }
   }
 }
 
@@ -88,7 +93,7 @@ section {
   }
 
   &__title + &__content {
-    padding-top: 0.75em;
+    padding-top: var(--gap-vertical);
   }
 
   &:not(#projects) {
@@ -113,6 +118,11 @@ section#about {
   @include mq.mq($from: small) {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
+  }
+
+  .section__content {
+    padding-top: var(--gap-vertical);
+    padding-bottom: calc(var(--line-height) * 2em);
   }
 }
 
@@ -189,13 +199,13 @@ section#time {
 
 body[data-view="home"] {
   main {
-    grid-template-rows: 0fr 0fr auto 0fr 0fr;
+
   }
 }
 
 body[data-view="projects"] {
   main {
-    grid-template-rows: 0fr 0fr auto 0fr 0fr;
+
   }
   
   section#about .section__content-wrapper {
