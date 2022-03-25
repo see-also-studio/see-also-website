@@ -1,5 +1,7 @@
 @use "common/reset";
 
+@use "common/fonts";
+
 @use "common/mq-settings";
 @use "common/variables";
 
@@ -14,3 +16,4 @@
 @use "layouts/projects";
 @use "layouts/project";
 @use "layouts/contact";
+@use "layouts/widget";

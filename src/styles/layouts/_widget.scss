@@ -1,0 +1,5 @@
+.widget {
+  &::first-letter {
+    text-transform: capitalize;
+  }
+}

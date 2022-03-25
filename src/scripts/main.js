@@ -2,6 +2,7 @@ import barba from '@barba/core';
 import gsap from 'gsap';
 import Swiper from 'swiper';
 import { CustomBlockTime } from './components/time.js';
+import { CurrentWeather } from './components/weather.js';
 
 console.log('main.js');
 
@@ -12,6 +13,10 @@ runOnce();
 function runOnce() {
   document.querySelectorAll('.time').forEach(function(el) {
     new CustomBlockTime(el);
+  });
+
+  document.querySelectorAll('.widget').forEach(function(el) {
+    new CurrentWeather(el);
   });
 }
 
