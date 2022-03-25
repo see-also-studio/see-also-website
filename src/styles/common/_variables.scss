@@ -4,11 +4,9 @@
   --color--foreground: #191818;
   --color--background: #E5E1D9;
 
-
   --page-margin: 1.73em;
-
   --gap-vertical: 0.5em;
-
+  
   @include mq.mq($until: small) {
     --font-size--large: 1.25em;
     --line-height: 1.2;
