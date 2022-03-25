@@ -15,10 +15,13 @@ html {
 
 body {
   font-family: "Dia", sans-serif;
-  font-size: 125%;
   line-height: var(--line-height);
   color: var(--color--foreground);
   background: var(--color--background);
+
+  @include mq.mq($from: small) {
+    font-size: 147%;
+  }
 }
 
 a {
