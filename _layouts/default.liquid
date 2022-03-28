@@ -1,7 +1,6 @@
 {%- assign projects = site.pages | where: 'permalink', '/projects/' -%}
 {%- assign projects = projects[0] -%}
-{%- assign home = site.pages | where: 'permalink', '/' -%}
-{%- assign home = home[0] -%}
+{%- assign home = site.pages | where: 'permalink', '/' | first -%}
 <!doctype html>
 <html lang="en">
   <head>
@@ -19,7 +18,7 @@
         <h1 class="section__title"><a href="/">{{ site.title }}</a></h1>
         <div class="section__content-wrapper">
           <div class="section__content">
-            {{ home.content }}
+            {{ home.content | markdownify }}
           </div>
         </div>
       </section>
