@@ -7,18 +7,27 @@
   
   &__header {
     display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.4em;
   }
 
-  &__date {
-    &::before {
+  &__title {
+    display: inline;
+
+    &::after {
       content: ", ";
     }
   }
 
   &__tags {
     display: flex;
-    > *:not(:first-child) {
-      &::before {
+    flex-wrap: wrap;
+    column-gap: 0.4em;
+
+    > * {
+      display: inline;
+      
+      &:not(:last-child)::after {
         content: ", "
       }
     }
