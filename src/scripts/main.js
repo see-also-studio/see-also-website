@@ -1,8 +1,10 @@
 import barba from '@barba/core';
 import gsap from 'gsap';
-import Swiper from 'swiper';
+import Swiper, { Navigation, EffectFade, Keyboard, Mousewheel, A11y } from 'swiper';
 import { CustomBlockTime } from './components/time.js';
 import { CurrentWeather } from './components/weather.js';
+
+Swiper.use([Navigation, EffectFade, Keyboard, Mousewheel, A11y]);
 
 console.log('main.js');
 
@@ -34,6 +36,17 @@ function initGallery() {
       effect: 'fade',
       fadeEffect: {
         crossFade: true,
+      },
+      navigation: {
+        nextEl: '.gallery__button--next',
+        prevEl: '.gallery__button--prev',
+        disabledClass: 'gallery__button--disabled',
+      },
+      keyboard: {
+        enabled: true,
+      },
+      mousewheel: {
+        eventsTarget: '.gallery__inner',
       },
       spaceBetween: 15,
     });

@@ -1,11 +1,21 @@
+@use "mq";
+
 :root {
   --color--foreground: #191818;
   --color--background: #E5E1D9;
 
-  --font-size--large: 1.25em;
-  --line-height: 1.2;
-
   --page-margin: 1.73em;
-
   --gap-vertical: 0.5em;
+  
+  @include mq.mq($until: small) {
+    --font-size--large: 1.25em;
+    --line-height: 1.2;
+
+  }
+
+  @include mq.mq($from: small) {
+    --font-size--large: 1.1em;
+    --line-height: 1.13;
+
+  }
 }
