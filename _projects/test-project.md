@@ -5,12 +5,10 @@ tags:
   - Tag 1
   - Tag 2
   - Tag 3
-color: "#726326"
-featured: 
-  href: "projects/test-project/OSIRIS_Mars_true_color.jpg"
-  alt: ""
-  height: 2205
-  width: 2205
+# array containing strings
+color: 
+  - "#cfcdc9"
+  - "#726326"
 media: 
 # Each entry must list file name (excluding file type/extention), file extention (eg. jpg, jpeg, png, gif), height and width, alt text (optional)
 # -

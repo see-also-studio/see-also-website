@@ -5,7 +5,8 @@ tags:
   - Tag 1
   - Tag 2
   - Tag 3
-color: "#082C7C"
+color: 
+  - "#082C7C"
 media: 
 # Each entry must list file name (excluding file type/extention), file extention (eg. jpg, jpeg, png, gif), height and width, alt text (optional)
 # -
