@@ -2,7 +2,8 @@
 layout: default
 ---
 <ul class="projects">
-  {% for project in site.projects %}
+  {%- assign projects = site.projects | reverse -%}
+  {% for project in projects %}
   <li class="projects__item" 
     title="{{ project.title }}" 
     data-tags="{% include project_tags.liquid %}"
