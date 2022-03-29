@@ -1,20 +1,36 @@
 ---
-title: Test Project 2
+# @string
+title: Example project
+
+# @int
 year: 2022
+
+# (optional) @string
+# yearEnd: ongoing
+
+# @array
 tags: 
-  - Tag 1
-  - Tag 2
-  - Tag 3
+  - Wesbite
+  - Branding
+
+# @array
 color: 
   - "#082C7C"
+
+# @array
 media: 
-# Each entry must list file name (excluding file type/extention), file extention (eg. jpg, jpeg, png, gif), height and width, alt text (optional)
+# Each entry must list file name, height and width, alt text (optional)
 # -
+#   @string
 #   href: "dir-name/filename"
-#   extention: "jpg"
+#
+#   @int
 #   height: 800
 #   width: 600
+#
+#   @string
 #   alt: ""
+#
   -
     href: "projects/test-project/Mercury_in_color_-_Prockter07-edit1.jpg"
     height: 1950
