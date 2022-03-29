@@ -1,6 +1,7 @@
 ---
 title: Test Project
 year: 2021
+yearEnd: ongoing
 tags: 
   - Tag 1
   - Tag 2
