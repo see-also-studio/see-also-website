@@ -1,3 +1,5 @@
+@use "mq";
+
 #projects {
   .section__title {
     &:hover {
@@ -28,15 +30,37 @@
   position: relative;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-start;
+  padding: 3.4em 0;
+
+  @include mq.mq($until: small) {
+    gap: 1em;
+  }
+
+  @include mq.mq($from: small) {
+    gap: 2em;
+  }
 
   &__item {
-    --size: 5em;
+    @include mq.mq($until: small) {
+      --size: 4.2em;
 
-    position: absolute;
+    }
+
+    @include mq.mq($from: small) {
+      --size: min(12vw, 7.6em);
+
+    }
+
+    // position: absolute;
     width: var(--size);
-    height: calc(var(--size) * 1.14);
-    top: max(calc(0 * var(--size)), calc(((100% - var(--size))/ 100) * var(--top)));
-    left: max(calc(0 * var(--size)), calc(((100% - var(--size))/ 100) * var(--left)));
+    //height: calc(var(--size) * 1.14);
+    aspect-ratio: 1 / 1.14;
+    // top: max(calc(0 * var(--size)), calc(((100% - var(--size))/ 100) * var(--top)));
+    // left: max(calc(0 * var(--size)), calc(((100% - var(--size))/ 100) * var(--left)));
 
     border-radius: 50%;
     background: var(--project-color);
@@ -60,6 +84,43 @@
 
     &:not(:hover) {
       mix-blend-mode: luminosity;
+    }
+  }
+}
+
+/**
+* Position projects list container on projects index
+*
+*/
+body[data-view="projects"] {
+  main {
+
+  }
+  
+  section#about .section__content-wrapper {
+    display: none;
+  }
+
+  section#projects {
+    grid-row: 3 / 5;
+    pointer-events: none;
+
+    @include mq.mq($until: small) {
+      grid-row: 3 / 5;
+    }
+  
+    @include mq.mq($from: small) {
+      grid-row: 2 / 4;
+      grid-column: 1 / 3;
+    }
+
+    * {
+      pointer-events: inherit;
+    }
+
+    .section__title, 
+    .projects__item {
+      pointer-events: auto;
     }
   }
 }

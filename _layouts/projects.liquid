@@ -2,11 +2,12 @@
 layout: default
 ---
 <ul class="projects">
-  {% for project in site.projects %}
+  {%- assign projects = site.projects | reverse -%}
+  {% for project in projects %}
   <li class="projects__item" 
     title="{{ project.title }}" 
     data-tags="{% include project_tags.liquid %}"
-    style="--left: {% include random.liquid min=1 max=100 %}; --top: {% include random.liquid min=1 max=100 %}; --project-color: {{ project.color | default: "#000" }}">
+    style="--left: {% include random.liquid min=1 max=100 %}; --top: {% include random.liquid min=1 max=100 %}; --project-color: {% include projects_color.liquid content=project.color %}">
     <a href="{{ project.url }}">
       {% if project.featured %}
         {% if project.featured.type == "video" %}
