@@ -212,38 +212,3 @@ body[data-view="home"] {
 
   }
 }
-
-body[data-view="project"] {
-  section#projects {
-    display: flex;
-    gap: var(--gap-vertical);
-    flex-direction: column;
-
-    .section__content-wrapper {
-      position: relative;
-      flex-grow: 1;
-      min-height: 16em;
-
-      @include mq.mq($until: small) {
-        left: -38vw;
-        width: calc(38vw + 100%);
-      }
-    }
-
-    .gallery {
-      position: absolute;
-      top: 0;
-      left: 0; 
-      right: 0;
-      bottom: 0;
-    }
-  }
-
-  .widget {
-      //display: none;
-  }
-
-  section#about .section__content-wrapper {
-    display: none;
-  }
-}
