@@ -1,0 +1,6 @@
+{%- assign isGradient = include.content | size -%}
+{%- if isGradient <= 1  -%}
+  {{ include.content | first | default: "#000" }}
+{%- else -%}
+  linear-gradient({{ include.content | join: ", " }})
+{%- endif -%}

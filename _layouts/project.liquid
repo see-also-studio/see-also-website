@@ -8,7 +8,7 @@ layout: default
   <div class="content project__content">
     <div class="project__header">
       <h2 class="project__title">{{ page.title }}</h2>
-      <span class="project__date">{{ page.year }}</span>
+      <span class="project__date">{{ page.year }}{% if page.yearEnd %}–⁠{{ page.yearEnd }}{% endif %}</span>
     </div>
     {% if page.tags %}
     <ul class="project__tags">
