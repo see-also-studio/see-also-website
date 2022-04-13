@@ -30,41 +30,30 @@
   position: relative;
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   align-content: flex-start;
   justify-content: flex-start;
   padding: 3.4em 0;
 
   @include mq.mq($until: small) {
-    gap: 1em;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 4.36%;
+    row-gap: 0.9em;
   }
 
   @include mq.mq($from: small) {
-    gap: 2em;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 6.6%;
+    row-gap: 3.16em;
+    padding-left: 3vw;
+    padding-right: 3vw;
   }
 
   &__item {
-    @include mq.mq($until: small) {
-      --size: 4.2em;
-
-    }
-
-    @include mq.mq($from: small) {
-      --size: min(12vw, 7.6em);
-
-    }
-
-    // position: absolute;
-    width: var(--size);
-    //height: calc(var(--size) * 1.14);
+    width: 100%;
     aspect-ratio: 1 / 1.14;
-    // top: max(calc(0 * var(--size)), calc(((100% - var(--size))/ 100) * var(--top)));
-    // left: max(calc(0 * var(--size)), calc(((100% - var(--size))/ 100) * var(--left)));
-
     border-radius: 50%;
     background: var(--project-color);
-    filter: blur(0.45em);
 
     &:not([style]) {
       display: none;
@@ -74,6 +63,14 @@
       display: block;
       width: 100%;
       height: 100%;
+    }
+
+    @include mq.mq($until: small) {
+      filter: blur(1.34vw);
+    }
+  
+    @include mq.mq($from: small) {
+      filter: blur(0.91vw);
     }
   }
 

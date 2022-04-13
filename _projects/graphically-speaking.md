@@ -1,5 +1,6 @@
 ---
 title: "Graphically Speaking"
+order: 3
 year: 2017
 #yearEnd: "ongoing"
 tags: 
