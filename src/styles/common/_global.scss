@@ -133,6 +133,10 @@ section#about {
   .section__content {
     padding-top: var(--gap-vertical);
     padding-bottom: calc(var(--line-height) * 2em);
+
+    > p + p {
+      margin-top: 1em;
+    }
   }
 }
 
