@@ -83,6 +83,17 @@
       mix-blend-mode: luminosity;
     }
   }
+
+  &--empty {
+    display: block;
+
+    img {
+      object-position: top left;
+      mix-blend-mode: initial !important;
+      height: auto;
+      max-height: 50vh;
+    }
+  }
 }
 
 /**

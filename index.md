@@ -2,6 +2,8 @@
 layout: home
 permalink: /
 ---
-A creative studio based in London. Founded by [Lucy Maria](http://lucymaria.co.uk/){:target="_blank" rel="noopener"} and [Mike Stevens](https://www.mikestevens.co.uk/){:target="_blank" rel="noopener"} in 2020.
+See, Also is a creative studio working in creative direction, graphic and web design.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Founded by [Lucy Maria](http://lucymaria.co.uk/){:target="_blank" rel="noopener"} and [Mike Stevens](https://www.mikestevens.co.uk/){:target="_blank" rel="noopener"} in 2020.
+
+For new collaborations and commissions, please [email us](mailto:studio@see-also.com){:target="_blank" rel="noopener"}.

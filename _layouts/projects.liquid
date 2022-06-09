@@ -1,8 +1,10 @@
 ---
 layout: default
 ---
+{%- assign projects = site.projects | sort: 'order' -%}
+{%- assign length = projects | size -%}
+{% if length > 0 %}
 <ul class="projects">
-  {%- assign projects = site.projects | sort: 'order' -%}
   {% for project in projects %}
   <li class="projects__item" 
     title="{{ project.title }}" 
@@ -22,3 +24,9 @@ layout: default
   </li>
   {% endfor %}
 </ul>
+{% else %}
+<div class="projects projects--empty">
+  <p>On the way</p>
+  <img src="/assets/nothing.gif">
+</div>
+{% endif %}
