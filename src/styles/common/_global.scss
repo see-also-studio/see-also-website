@@ -20,7 +20,7 @@ body {
   background: var(--color--background);
 
   @include mq.mq($from: small) {
-    font-size: 147%;
+    font-size: 135%;
   }
 }
 
