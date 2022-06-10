@@ -1,6 +1,6 @@
 ---
 title: Projects
-navtitle: "Sample work"
+navtitle: "View sample work"
 layout: projects
 permalink: /projects/
 ---
