@@ -1,0 +1,175 @@
+html, 
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'neue-haas-unica', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background: var(--color--fg);
+    color: white;
+    margin: 0;
+    font-size: 1.2vw;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media screen and (max-width: 860px) {
+        font-size:1.7vw;
+    }
+
+    @media screen and (max-width: 720px) {
+        font-size:1.2em;
+    }
+
+    @media screen and (max-width: 500px) {
+        font-size:1em;
+    }
+}
+
+p + p {
+    margin-top: calc(var(--line-height) * 1em);
+}
+
+a {
+    color: inherit;
+}
+
+#message br {
+    display: block;
+    margin-top: calc(var(--line-height) * 1em);
+    content: "";
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    column-gap: 4em;
+    color: var(--color--fg);
+    padding: 3em 0.5em;
+    box-sizing: border-box;
+    min-height: 100%;
+    line-height: var(--line-height);
+    pointer-events: none;
+    z-index: 50;
+    position: relative;
+    overflow: hidden;
+
+    .card {
+        pointer-events: initial;
+        height: max-content;
+        align-self: center;
+        filter: drop-shadow(0 0.8em 1em rgba(0,0,0,.16));
+        -ms-touch-action: none;
+        touch-action: none;
+
+        &:nth-child(1) {
+            .card__inner {
+                -webkit-mask-image: radial-gradient(0.75em at 1.5em 1.5em,transparent 95%,#000 100%);
+                mask-image: radial-gradient(0.75em at 1.5em 1.5em,transparent 95%,#000 100%);
+                transform: rotate(3deg);
+            }
+
+            &.active {
+                .card__inner {
+                    -webkit-mask-image: radial-gradient(0.75em at 1.5em 1.5em,transparent 95%,#000 100%);
+                    mask-image: radial-gradient(0.75em at calc(100% - 1.5em) 1.5em,transparent 95%,#000 100%);
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            margin-top: -0.8em;
+
+            .card__inner {
+                -webkit-mask-image: radial-gradient(0.75em at 1.5em 1.5em,transparent 95%,#000 100%);
+                mask-image: radial-gradient(0.7em at 2em 2.2em,transparent 95%,#000 100%);
+                width: 20em;
+                min-height: 13em;
+                transform: rotate(-3deg);
+                border-radius: 2em;
+
+                > * {
+                    font-size: 85%;
+                }
+            }
+        }
+    }
+
+    .card__inner {
+        width: 24em;
+        background: var(--color--bg);
+        padding: 1.85em;
+        padding-top: 2.5em;
+        //aspect-ratio: 6/4;
+        min-height: 16em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #name {
+        font-family: 'IM Fell English', serif;
+        font-size: 1.5em;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        &::after {
+            content: "↪";
+            content: "View greeting";
+            font-size: 60%;
+            display: block;
+            margin-top: 0.5em;
+            text-transform: uppercase;
+        }
+    }
+
+    @media screen and (min-width: 45em) {
+        flex-wrap: nowrap;
+
+        .card {
+            &:nth-child(1) {
+                margin-bottom: 5em;
+            }
+
+            &:nth-child(2) {
+                margin-top: 5em;
+            }
+        }
+    }
+
+    @media screen and (max-width: 25rem) {
+        font-size: 0.8em;
+    }
+}
+
+.card__inner {
+}
+
+#message {
+    position: relative;
+
+    &.active {
+        #name {
+            display: none;
+        }
+    }
+
+    &:not(.active) {
+        #content {
+            display: none;
+        }
+    }
+}
+
+audio {
+    display: none;
+    height: 0;
+    width: 0;
+}

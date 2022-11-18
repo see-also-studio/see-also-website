@@ -1,0 +1,69 @@
+.snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 110;
+    overflow: hidden;
+    font-size: 3em;
+
+    .snow__flake {
+        font-family: sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        line-height: normal;
+        display: block;
+        position: fixed;
+        animation: snow 5s ease-in-out infinite;
+        
+        &::after {
+            content: "*";
+        }
+
+        &.angel {
+            background-image: url("/xmas2021/dist/images/angel01.gif");
+            width: 0.5em;
+            height: 1em;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+
+            &.angel--alt {
+                background-image: url("/xmas2021/dist/images/angel02.gif");
+            }
+
+            &::after {
+                content: "";
+            }
+        }
+    }
+}
+
+#snow-button {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    line-height: normal;
+    position: fixed;
+    top: 0.08em;
+    right: 0.4rem;
+    font-size: 12.5em;
+    color: var(--color--alt1);
+    z-index: 110;
+    top: 0;
+}
+
+@keyframes snow {
+    0% {
+        transform: translate3d(1em,0,0)
+    }
+
+    50% {
+        transform: translate3d(-1em,0,0)
+    }
+
+    100% {
+        transform: translate3d(1em,0,0)
+    }
+}
