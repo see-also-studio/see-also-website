@@ -1,0 +1,17 @@
+{
+  "name": "see-also-christmas-2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "sass": "sass --style=compressed src/styles/main.scss dist/styles/main.css", 
+    "watch:sass": "npm run sass -- --watch",
+    "localhost": "php -S localhost:8080"
+  },
+  "author": "See Also",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.45.0"
+  }
+}
