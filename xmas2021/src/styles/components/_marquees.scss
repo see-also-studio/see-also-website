@@ -1,0 +1,31 @@
+.marquee {
+    font-family: "Compagnon", monospace, sans-serif;
+    font-size: 1em;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    background: var(--color--fg);
+    overflow: hidden;
+    white-space: nowrap;
+    z-index: 60;
+    line-height: var(--line-height);
+    padding-bottom: 0.3em;
+
+    &.marquee--top {
+        top: 0;
+    }
+
+    &.marquee--bottom {
+        bottom: 0;
+    }
+
+    > .marquee__wrapper {
+        display: inline-block;
+    }
+
+    &:not(.compact) {
+        > .marquee__wrapper {
+            padding-right: 12em;
+        }
+    }
+}

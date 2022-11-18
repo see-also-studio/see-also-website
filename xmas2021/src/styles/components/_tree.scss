@@ -1,0 +1,100 @@
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+  font-size: 2vh;
+  display: flex;
+  justify-content: center;
+  
+  .background__tree {
+    --animation-offset: 0s;
+
+    position: relative;
+    height: 100%;
+    //aspect-ratio: 0.583;
+    min-width: 58.3vh;
+    display: inline-block;
+
+    &:hover{
+      svg {
+        animation-play-state: running !important;
+      }
+    }
+  }
+
+  path {
+    fill: white;
+  }
+
+  svg {
+    --sway-amount: 1;
+    --rot-amount: 1;
+    
+    position: absolute;
+    transform-origin: 50% 90%;
+
+    &:not(#tree__5) {
+      animation: tree-sway ease-in-out infinite;
+      animation-duration: 6s;
+      animation-delay: var(--animation-offset);
+      animation-play-state: paused;
+    }
+
+    @keyframes tree-sway {
+      0% {
+        transform: rotate(calc(-1deg * var(--rot-amount))) translate3d(calc(-0.01em * var(--sway-amount)),0,0);
+      }
+      40% {
+        transform: rotate(calc(1deg * var(--rot-amount))) translate3d(calc(0.01em * var(--sway-amount)),0,0);
+      }
+      100% {
+        transform: rotate(calc(-1deg * var(--rot-amount))) translate3d(calc(-0.01em * var(--sway-amount)),0,0);
+      }
+    }
+  }
+
+  #tree__1 {
+    --sway-amount: 160;
+    --rot-amount: 5;
+
+    width: 48%;
+    left: 22.2%;
+    top: 6%;
+  }
+
+  #tree__2 {
+    --sway-amount: 80;
+    --rot-amount: 4;
+    width: 73%;
+    left:6.34%;
+    top: 20%;
+  }
+
+  #tree__3 {
+    --sway-amount: 40;
+    --rot-amount: 2.5;
+    width: 81.5%;
+    left: 8.5%;
+    top: 41.2%;
+  }
+
+  #tree__4 {
+    --sway-amount: 20;
+    --rot-amount: 1.5;
+    width: 92.5%;
+    left: 7.4%;
+    top: 62.3%;
+  }
+
+  #tree__5 {
+    width: 30%;
+    left: 38.5%;
+    top: 82.5%;
+  }
+}
+
+
