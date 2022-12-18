@@ -34,7 +34,7 @@ function createBauble(pattern) {
   const baubleElement = document.createElement('div');
 
   const styles = {
-    '--mask-image': `url('/media/patterns/${randomPattern}.svg')`,
+    '--mask-image': `url('/xmas2022/media/patterns/${randomPattern}.svg')`,
     '--color--fg':  '#fff',
     '--color--bg':  randomColor,
     'width':  randomSize + 'px',
@@ -50,7 +50,7 @@ function createBauble(pattern) {
 
   // Object.assign(baubleElement.style, styles);
 
-  baubleElement.style.setProperty('--mask-image', `url('/media/patterns/${randomPattern}.svg')`);
+  baubleElement.style.setProperty('--mask-image', `url('/xmas2022/media/patterns/${randomPattern}.svg')`);
   baubleElement.style.setProperty('--color--fg',  '#fff');
   baubleElement.style.setProperty('--color--bg',  randomColor);
   baubleElement.style.setProperty('width',  randomSize + 'px');
