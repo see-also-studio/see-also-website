@@ -10,11 +10,11 @@
 
 body {
   font-family: var(--font-family);
-  background-color: #d7d5d0;
+  background-color: #DBD0B9;
   background-size: 6.25em 6.25em;
   background-image: 
-    linear-gradient(to right, #58935c 1px, transparent 1px),
-    linear-gradient(to bottom, #58935c 1px, transparent 1px);
+    linear-gradient(to right, #FF0000 1px, transparent 1px),
+    linear-gradient(to bottom, #FF0000 1px, transparent 1px);
 }
 
 main {
@@ -35,7 +35,7 @@ main {
 }
 
 .intro {
-  --color--fg: #04690e;
+  --color--fg: #FA2222;
   --color--bg: #e4e3e2;
 
   color: var(--color--fg);
