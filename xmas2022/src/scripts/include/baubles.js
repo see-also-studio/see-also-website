@@ -5,6 +5,7 @@ let baubles = 0;
 export function bauble(baubleContainer, pattern = []) {
   if (baubles > 18) {
     console.log('Max baubles already reached');
+    baubleContainer.classList.remove('active');
     return;
   }
 

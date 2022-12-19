@@ -46,6 +46,7 @@ main {
   height: 100%;
   z-index: 90;
   padding: 1em;
+  cursor: pointer;
 
   display: flex;
   flex-direction: column;
@@ -250,8 +251,11 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  cursor: pointer;
   z-index: 10;
+
+  &.active {
+    cursor: url("/media/click.svg"), pointer;
+  }
 
   &.paused .ball {
     animation-play-state: paused;
