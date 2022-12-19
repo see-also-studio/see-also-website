@@ -13,7 +13,7 @@
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.7.2",
-    "gsap": "^3.11.3",
+    "interactjs": "^1.10.17",
     "mini-css-extract-plugin": "^2.7.2",
     "sass": "^1.56.2",
     "sass-loader": "^13.2.0",
