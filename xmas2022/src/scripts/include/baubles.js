@@ -18,7 +18,8 @@ export function bauble(baubleContainer, pattern = [], color = []) {
 
 function createBauble(pattern, color) {
   const patterns = pattern.length ? pattern : ['00', '01', '02', '03', '04', '06', '09', '13', '14', '15', '16', '17', '18', '19'];
-  const colors = color.length ? color : ['#04680E', '#C33636', '#3660B0', '#C3A436', '#4F7462'];
+  //                                     green      red        blue       yellow     green-alt
+  const colors = color.length ? color : ['#04680E', '#DE0B0B', '#0E4DC5', '#E4BA24', '#4F7462'];
 
   const randomPattern = patterns[randomRange(0, patterns.length, true)];
   const randomSize = randomRange(14, 18);
