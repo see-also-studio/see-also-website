@@ -36,6 +36,7 @@ document.querySelectorAll('.message, .info').forEach((element) => draggable(elem
 
 const baubleContainer = document.querySelector('.background');
 const startPatterns = ['00', '19', '17', '15', '01'];
-const startColors = ['#04680E','#C33636', '#3660B0', '#C3A436', '#4F7462'];
+//                   green      red        blue       yellow     green-alt
+const startColors = ['#04680E', '#DE0B0B', '#0E4DC5', '#E4BA24', '#4F7462'];
 baubleContainer.addEventListener('click', () => bauble(baubleContainer));
 startPatterns.forEach((pattern, i) => bauble(baubleContainer, [pattern], [startColors[i]]));
