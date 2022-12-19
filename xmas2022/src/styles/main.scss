@@ -67,13 +67,13 @@ main {
     box-shadow: 0.625rem 0.625rem 0.6875rem rgba(250, 34, 34, 0.15);
 
     &:not(:nth-child(3)) {
-      font-size: 8.75em;
+      font-size: 9.75em;
       font-family: var(--font-family--serif);
       padding: 0.19em 0.4em 0.15em;
     }
 
     &:nth-child(3) {
-      font-size: 3.75em;
+      font-size: 4.75em;
       font-family: var(--font-family--sans);
       padding: 0.375em 0.9em;
     }
@@ -112,11 +112,12 @@ main {
   }
 
   &__header {
+    font-size: 1.125em;
     position: relative;
     border-bottom: 1px solid #000;
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    padding: 1rem;
 
     &::before {
       content: "❆ ❆ ❆";
@@ -131,8 +132,9 @@ main {
   }
 
   &__heading {
+    font-size: 1.125em;
     display: flex;
-    padding: 1em;
+    padding: 1rem;
     color: #F40B0B;
 
     &::before {
@@ -144,10 +146,12 @@ main {
   }
 
   &__content {
+    font-size: 1.125em;
     display: flex;
     flex-grow: 1;
-    padding: 1em;
+    padding: 1rem;
     padding-bottom: 2em;
+    padding-right: 3em;
     transition-property: opacity;
     transition-duration: 1s;
     position: relative;
