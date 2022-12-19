@@ -119,6 +119,8 @@ main {
   position: relative;
   z-index: 50;
   margin-bottom: 5em;
+  cursor: grab;
+  touch-action: none;
 
   @include mq.mq($until: 690px) {
     font-size: 2.8vw;
@@ -238,6 +240,8 @@ main {
 }
 
 .info {
+  cursor: grab;
+  touch-action: none;
   position: relative;
   z-index: 50;
   margin-top: 5em;
