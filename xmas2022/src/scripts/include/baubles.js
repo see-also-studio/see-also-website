@@ -21,7 +21,7 @@ function createBauble(pattern) {
   const colors = ['#3A8342', '#34BE41', '#6EA474', '#04680E', '#04680E', '#04680E', '#04680E'];
 
   const randomPattern = patterns[randomRange(0, patterns.length, true)];
-  const randomSize = randomRange(4, 6) + 'em';
+  const randomSize = randomRange(14, 18);
   const randomColor = colors[randomRange(0, colors.length, true)];
 
   const randomXDuration = randomRange(25, 45);
@@ -38,7 +38,7 @@ function createBauble(pattern) {
     '--mask-image': `url('/media/patterns/${randomPattern}.svg')`,
     '--color--fg':  '#fff',
     '--color--bg':  randomColor,
-    'width':  randomSize + 'px',
+    '--width':  randomSize + 'em',
   
     '--durationX':  randomXDuration + 's',
     '--durationY': randomYDuration + 's',
@@ -54,7 +54,7 @@ function createBauble(pattern) {
   baubleElement.style.setProperty('--mask-image', `url('/media/patterns/${randomPattern}.svg')`);
   baubleElement.style.setProperty('--color--fg',  '#fff');
   baubleElement.style.setProperty('--color--bg',  randomColor);
-  baubleElement.style.setProperty('width',  randomSize + 'px');
+  baubleElement.style.setProperty('--width',  randomSize + 'em');
 
   baubleElement.style.setProperty('--durationX',  randomXDuration + 's');
   baubleElement.style.setProperty('--durationY', randomYDuration + 's');

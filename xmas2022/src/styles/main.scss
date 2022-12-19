@@ -272,9 +272,10 @@ main {
   --durationX: 40s;
   --durationY: 40s;
   --durationR: 20s;
+  --width: 10em;
 
-  width: 10em;
-  height: 10em;
+  width: var(--width);
+  height: var(--width);
   background-color: var(--color--bg);
   border-radius: 50%;
   overflow: hidden;
