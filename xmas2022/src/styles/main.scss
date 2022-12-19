@@ -10,11 +10,11 @@
 
 body {
   font-family: var(--font-family);
-  background-color: #d7d5d0;
+  background-color: #DBD0B9;
   background-size: 6.25em 6.25em;
   background-image: 
-    linear-gradient(to right, #58935c 1px, transparent 1px),
-    linear-gradient(to bottom, #58935c 1px, transparent 1px);
+    linear-gradient(to right, #FF0000 1px, transparent 1px),
+    linear-gradient(to bottom, #FF0000 1px, transparent 1px);
 }
 
 main {
@@ -35,7 +35,7 @@ main {
 }
 
 .intro {
-  --color--fg: #04690e;
+  --color--fg: #FA2222;
   --color--bg: #e4e3e2;
 
   color: var(--color--fg);
@@ -46,12 +46,17 @@ main {
   height: 100%;
   z-index: 90;
   padding: 1em;
+  cursor: pointer;
 
   display: flex;
   flex-direction: column;
   gap: 2em;
   align-items: center;
   justify-content: center;
+
+  @include mq.mq($until: 690px) {
+    font-size: 2vw;
+  }
 
   &.inactive {
     pointer-events: none;
@@ -66,13 +71,13 @@ main {
     box-shadow: 0.625rem 0.625rem 0.6875rem rgba(250, 34, 34, 0.15);
 
     &:not(:nth-child(3)) {
-      font-size: 8.75em;
+      font-size: 9.75em;
       font-family: var(--font-family--serif);
       padding: 0.19em 0.4em 0.15em;
     }
 
     &:nth-child(3) {
-      font-size: 3.75em;
+      font-size: 4.75em;
       font-family: var(--font-family--sans);
       padding: 0.375em 0.9em;
     }
@@ -80,16 +85,32 @@ main {
     &:nth-child(1) {
       margin-left: 10%;
       margin-right: auto;
+      animation: 8s ease-in-out -2s infinite hover;
     }
 
     &:nth-child(2) {
       margin-left: auto;
       margin-right: 10%;
+      animation: 8s ease-in-out -4.5s infinite hover;
     }
 
     &:nth-child(3) {
       margin-left: 5%;
       margin-right: auto;
+    }
+  }
+
+  @keyframes hover {
+    0% {
+      transform: translateY(0)
+    }
+
+    50% {
+      transform: translateY(0.075em)
+    }
+
+    100% {
+      transform: translateY(0)
     }
   }
 }
@@ -98,6 +119,10 @@ main {
   position: relative;
   z-index: 50;
   margin-bottom: 5em;
+
+  @include mq.mq($until: 690px) {
+    font-size: 2.8vw;
+  }
 
   &__inner {
     display: flex;
@@ -111,11 +136,12 @@ main {
   }
 
   &__header {
+    font-size: 1.125em;
     position: relative;
     border-bottom: 1px solid #000;
     display: flex;
     justify-content: space-between;
-    padding: 1em;
+    padding: 1rem;
 
     &::before {
       content: "❆ ❆ ❆";
@@ -125,13 +151,14 @@ main {
 
   &__recipient {
     &::before {
-      content: "FOA ";
+      content: "FAO ";
     }
   }
 
   &__heading {
+    font-size: 1.125em;
     display: flex;
-    padding: 1em;
+    padding: 1rem;
     color: #F40B0B;
 
     &::before {
@@ -143,10 +170,12 @@ main {
   }
 
   &__content {
+    font-size: 1.125em;
     display: flex;
     flex-grow: 1;
-    padding: 1em;
+    padding: 1rem;
     padding-bottom: 2em;
+    padding-right: 3em;
     transition-property: opacity;
     transition-duration: 1s;
     position: relative;
@@ -161,6 +190,8 @@ main {
 
     br {
       margin-bottom: 1em;
+      display: block;
+      content: "";
     }
     
   }
@@ -211,6 +242,10 @@ main {
   z-index: 50;
   margin-top: 5em;
 
+  @include mq.mq($until: 690px) {
+    font-size: 2.8vw;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -250,8 +285,11 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  cursor: pointer;
   z-index: 10;
+
+  &.active {
+    cursor: url("/media/click.svg"), pointer;
+  }
 
   &.paused .ball {
     animation-play-state: paused;
@@ -268,9 +306,10 @@ main {
   --durationX: 40s;
   --durationY: 40s;
   --durationR: 20s;
+  --width: 10em;
 
-  width: 10em;
-  height: 10em;
+  width: var(--width);
+  height: var(--width);
   background-color: var(--color--bg);
   border-radius: 50%;
   overflow: hidden;
