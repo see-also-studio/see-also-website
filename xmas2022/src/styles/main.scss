@@ -81,16 +81,32 @@ main {
     &:nth-child(1) {
       margin-left: 10%;
       margin-right: auto;
+      animation: 8s ease-in-out -2s infinite hover;
     }
 
     &:nth-child(2) {
       margin-left: auto;
       margin-right: 10%;
+      animation: 8s ease-in-out -4.5s infinite hover;
     }
 
     &:nth-child(3) {
       margin-left: 5%;
       margin-right: auto;
+    }
+  }
+
+  @keyframes hover {
+    0% {
+      transform: translateY(0)
+    }
+
+    50% {
+      transform: translateY(0.075em)
+    }
+
+    100% {
+      transform: translateY(0)
     }
   }
 }
