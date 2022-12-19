@@ -2,7 +2,7 @@ import {randomRange} from '../functions/randomRange';
 
 let baubles = 0;
 
-export function bauble(baubleContainer, pattern = []) {
+export function bauble(baubleContainer, pattern = [], color = []) {
   if (baubles > 18) {
     console.log('Max baubles already reached');
     baubleContainer.classList.remove('active');
@@ -11,14 +11,14 @@ export function bauble(baubleContainer, pattern = []) {
 
   baubles ++;
 
-  const baubleElement = createBauble(pattern);
+  const baubleElement = createBauble(pattern, color);
   console.log(baubleElement);
   baubleContainer.appendChild(baubleElement);
 }
 
-function createBauble(pattern) {
+function createBauble(pattern, color) {
   const patterns = pattern.length ? pattern : ['00', '01', '02', '03', '04', '06', '09', '13', '14', '15', '16', '17', '18', '19'];
-  const colors = ['#3A8342', '#34BE41', '#6EA474', '#04680E', '#04680E', '#04680E', '#04680E'];
+  const colors = color.length ? color : ['#04680E', '#C33636', '#3660B0', '#C3A436', '#4F7462'];
 
   const randomPattern = patterns[randomRange(0, patterns.length, true)];
   const randomSize = randomRange(14, 18);
