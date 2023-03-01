@@ -28,9 +28,14 @@ function viewUpdate() {
 }
 
 function initGallery() {
-  const galleries = document.querySelectorAll('.gallery');
+  const galleries = document.querySelectorAll('#projects .section__content:last-child .gallery');
+  const galleryParent = document.querySelector('#projects .section__content');
+  const galleryNavigated = galleryParent.getAttribute('data-navigated');
+  console.log(galleryNavigated ? 'Slide in from: ' + galleryNavigated : 'Navigated straight to page');
   galleries.forEach(function(el) {
-    new Swiper(el.querySelector('.gallery__inner'), {
+    let init = true;
+    let navigatable = false;
+    const swiper = new Swiper(el.querySelector('.gallery__inner'), {
       grabCursor: true,
       autoHeight: false,
       effect: 'fade',
@@ -45,11 +50,59 @@ function initGallery() {
       keyboard: {
         enabled: true,
       },
-      mousewheel: {
-        eventsTarget: '.gallery__inner',
-      },
+      // mousewheel: {
+      //   eventsTarget: '.gallery__inner',
+      // },
       spaceBetween: 15,
+      initialSlide: !galleryNavigated ? 1 : (galleryNavigated === 'end' ? 2 : 0),
+      on: {
+        afterInit: () => {
+          console.log('Gallery init');
+          setTimeout(() => {
+            // Only available if there is timeout
+            console.log(swiper.wrapperEl.parentElement.parentElement.parentElement.parentElement);
+          }, 10);
+        },
+        reachEnd: () => {
+          console.log('Reached end, navigate to next project');
+          const url = document.querySelector('#projects .project').getAttribute('data-next');
+          if (navigatable && url) {
+            console.log('Go to next project: ' + url);
+            swiper.allowSlideNext = false;
+            swiper.allowSlidePrev = false;
+            galleryParent.setAttribute('data-navigated', 'beginning')
+            barba.go(url);
+          }
+        },
+        reachBeginning: () => {
+          console.log('Reached beginning, navigate to previous project');
+          const url = document.querySelector('#projects .project').getAttribute('data-previous');
+          if (navigatable && url) {
+            console.log('Go to previous project: ' + url);
+            swiper.allowSlideNext = false;
+            swiper.allowSlidePrev = false;
+            galleryParent.setAttribute('data-navigated', 'end')
+            barba.go(url);
+          } else {
+            console.log('Cant navigate');
+          }
+        },
+        realIndexChange: () => {
+          console.log('Changed slide');
+        },
+      }
     });
+
+    if (init) {
+      init = false;
+      navigatable = true;
+
+      if (galleryNavigated === 'end') {
+        swiper.slidePrev();
+      } else if (galleryNavigated === 'beginning') {
+        swiper.slideNext();
+      }
+    }
   });
 
   // const projects = document.querySelectorAll('.projects__item');
@@ -164,7 +217,16 @@ barba.init({
           gsap.to(prevProjectContent, {
             opacity: 0,
             duration: transitionDuration,
-            onComplete: () => prevProjectContent.remove(),
+            onComplete: () => {
+              prevProjectContent.remove();
+              // Clean up extra content if navigation buttons are spammed and duplicates are left behind.
+              if (projectContentWrapperInner.children.length > 2) {
+                for (let i = projectContentWrapperInner.children.length - 2; i >= 1; i--) {
+                  console.log('Cleaning up left behind duplicate content elements.');
+                  projectContentWrapperInner.children[1].remove();
+                }
+              }
+            },
           });
         } else {
           // Entering project page from non project page. 
