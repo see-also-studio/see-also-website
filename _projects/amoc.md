@@ -11,11 +11,11 @@ color:
   - "#726326"
 media: 
 # Each entry must list file name, height and width, alt text (optional)
-# -
-#   href: "dir-name/filename"
-#   height: 800
-#   width: 600
-#   alt: ""
+-
+  href: "assets/nothing.gif"
+  height: 400
+  width: 225
+  alt: ""
 ---
 [Web address](https://amocarroll.com/){:target="_blank" rel="noopener"}.
 Web design and development.
