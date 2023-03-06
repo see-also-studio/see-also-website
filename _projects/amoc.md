@@ -12,7 +12,7 @@ color:
 media: 
 # Each entry must list file name, height and width, alt text (optional)
 -
-  href: "assets/nothing.gif"
+  href: "nothing.gif"
   height: 400
   width: 225
   alt: ""
