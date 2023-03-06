@@ -40,6 +40,12 @@
   &__button {
     cursor: pointer;
     text-transform: uppercase;
+    transition-duration: 200ms;
+    transition-property: background-color;
+
+    &:hover {
+      background: #AAA7A2;
+    }
 
     @include mq.mq($until: small) {
       font-size: 0.83em;
