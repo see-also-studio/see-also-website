@@ -1,6 +1,9 @@
 ---
 # @string
-title: Example project
+title: "Example project typed"
+
+# @int
+order: 1
 
 # @int
 year: 2022
@@ -10,8 +13,8 @@ year: 2022
 
 # @array
 tags: 
-  - Wesbite
-  - Branding
+  - "Wesbite"
+  - "Branding"
 
 # @array
 color: 

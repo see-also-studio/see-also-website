@@ -1,7 +1,32 @@
 ---
 layout: default
 ---
-<div class="project">
+{%- assign projects = site.projects | sort: 'order' -%}
+{%- for project in projects -%}
+  {%- if project.url == page.url -%}
+    {%- assign currentIndex = forloop.index0 -%}
+    {%- assign prevIndex = currentIndex | minus: 1 -%}
+    {%- assign nextIndex = currentIndex | plus: 1 -%}
+    {%- assign projectsLength = forloop.length | minus: 1 -%}
+
+    {%- if currentIndex == projectsLength -%}
+      {%- assign prevProject = projects[prevIndex] -%}
+      {%- assign nextProject = projects[0] -%}
+    {%- endif-%}
+
+    {%- if currentIndex < projectsLength and currentIndex != 0 -%}
+      {%- assign prevProject = projects[prevIndex] -%}
+      {%- assign nextProject = projects[nextIndex] -%}
+    {%- endif -%}
+
+    {%- if currentIndex == 0 -%}
+      {%- assign prevProject = projects[projectsLength] -%}
+      {%- assign nextProject = projects[nextIndex] -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%%}
+
+<div class="project" data-previous="{{ prevProject.url }}" data-next="{{ nextProject.url }}">
 
   {% include project_gallery.liquid %}
 

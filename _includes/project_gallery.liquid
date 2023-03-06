@@ -1,11 +1,17 @@
 <div class="project__gallery gallery">
   <div class="gallery__inner">
     <ul class="gallery__wrapper swiper-wrapper">
-      {% for media in page.media %}
-      <li class="gallery__item swiper-slide">
-        {% include image_project.liquid content=media %}
-      </li>
-      {% endfor %}
+      <li class="gallery__item swiper-slide"><!-- blank previous project navigation slide --></li>
+      {% if page.media %}
+        {% for media in page.media %}
+        <li class="gallery__item swiper-slide">
+          {% include image_project.liquid content=media %}
+        </li>
+        {% endfor %}
+      {% else %}
+      <li class="gallery__item swiper-slide empty">🚧</li>
+      {% endif %}
+      <li class="gallery__item swiper-slide"><!-- blank next project navigation slide --></li>
     </ul>
     <button class="gallery__button gallery__button--prev" title="Previous image in gallery"></button>
     <button class="gallery__button gallery__button--next" title="Next image in gallery"></button>
