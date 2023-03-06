@@ -216,3 +216,9 @@ body[data-view="home"] {
 
   }
 }
+
+body[data-view="project"] {
+  #projects .section__title a {
+    pointer-events: none;
+  }
+}
