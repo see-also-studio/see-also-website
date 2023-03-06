@@ -11,7 +11,6 @@ color:
   - "#726326"
 media: 
 # Each entry must list file name, height and width, alt text (optional)
--
 # -
 #   href: "dir-name/filename"
 #   height: 800
