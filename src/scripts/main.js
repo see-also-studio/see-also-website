@@ -29,8 +29,7 @@ function viewUpdate() {
 
 function initGallery() {
   const galleries = document.querySelectorAll('#projects .section__content:last-child .gallery');
-  const galleryParent = document.querySelector('#projects .section__content');
-  const galleryNavigated = galleryParent.getAttribute('data-navigated');
+  const galleryNavigated = document.body.getAttribute('data-navigated');
   console.log(galleryNavigated ? 'Slide in from: ' + galleryNavigated : 'Navigated straight to page');
   galleries.forEach(function(el) {
     let init = true;
@@ -60,6 +59,7 @@ function initGallery() {
           console.log('Gallery init');
           setTimeout(() => {
             // Only available if there is timeout
+            console.log(swiper.slides.length - 1);
             console.log(swiper.wrapperEl.parentElement.parentElement.parentElement.parentElement);
           }, 10);
         },
@@ -70,7 +70,7 @@ function initGallery() {
             console.log('Go to next project: ' + url);
             swiper.allowSlideNext = false;
             swiper.allowSlidePrev = false;
-            galleryParent.setAttribute('data-navigated', 'beginning')
+            document.body.setAttribute('data-navigated', 'beginning')
             barba.go(url);
           }
         },
@@ -81,7 +81,7 @@ function initGallery() {
             console.log('Go to previous project: ' + url);
             swiper.allowSlideNext = false;
             swiper.allowSlidePrev = false;
-            galleryParent.setAttribute('data-navigated', 'end')
+            document.body.setAttribute('data-navigated', 'end')
             barba.go(url);
           } else {
             console.log('Cant navigate');
@@ -95,13 +95,15 @@ function initGallery() {
 
     if (init) {
       init = false;
-      navigatable = true;
 
       if (galleryNavigated === 'end') {
+        swiper.slideTo(swiper.slides.length - 1, 0, false);
         swiper.slidePrev();
       } else if (galleryNavigated === 'beginning') {
         swiper.slideNext();
       }
+
+      navigatable = true;
     }
   });
 
