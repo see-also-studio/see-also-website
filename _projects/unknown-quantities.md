@@ -20,4 +20,4 @@ media:
 #   alt: ""
 ---
 [Web address](https://uqjournal.net/){:target="_blank" rel="noopener"}.
-Online archive/website and digital workflow process for Unknown Quantities—an annual publication from MA Graphic Communication Design × MA Culture, Criticism and Curation. A different team of editors delivers each new issue of UQ.
+Online archive, website and digital workflow process for an annual publication from Central Saint Martins' MA Graphic Communication Design × MA Culture, Criticism and Curation. Each issue is created and released by a new team of editors annually.
