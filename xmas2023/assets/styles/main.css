@@ -1,0 +1,11 @@
+@import "./import/reset.css";
+@import "./import/fonts.css";
+@import "./import/variables.css";
+@import "./import/general.css";
+@import "./import/typography.css";
+@import "./import/header.css";
+@import "./import/footer.css";
+@import "./import/final-section.css";
+@import "./import/scroll-objects.css";
+@import "./import/credits.css";
+@import "./import/audio-button.css";
