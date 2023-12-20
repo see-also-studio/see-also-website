@@ -1,0 +1,99 @@
+.audio-player {
+  display: none;
+}
+
+.audio-button {
+  --multiplier: 0.1;
+
+  position: fixed;
+  z-index: 50;
+  line-height: 1;
+  font-size: 200%;
+  font-size: min(6.2vw, 200%);
+  color: white;
+  border-radius: 50%;
+  padding: 0.3em 0.5em 0.3em;
+  overflow: hidden;
+
+  animation: shake 4000ms cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+.audio-button:hover {
+  filter: initial;
+}
+
+.audio-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #561D0E;
+  z-index: -1;
+}
+
+.audio-player.playing + .audio-button > span {
+  display: inline-block;
+  transform: rotate(18deg);
+}
+
+@media (max-width: 575px) {
+  .audio-button {
+    bottom: 0.5em;
+    left: 0.5em;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 799px) {
+  .audio-button {
+    bottom: 0.55em;
+    left: 0.55em;
+  }
+}
+
+@media (min-width: 800px) {
+  .audio-button {
+    bottom: 0.6em;
+    left: 0.6em;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  9% {
+    transform: translate3d(calc(var(--multiplier) * 1.65em), calc(var(--multiplier) * -1.53em), 0);
+  }
+  18% {
+    transform: translate3d(calc(var(--multiplier) * 0.22em), calc(var(--multiplier) * -1.01em), 0);
+  }
+  27% {
+    transform: translate3d(calc(var(--multiplier) * 1.15em), calc(var(--multiplier) * 1.15em), 0);
+  }
+  36% {
+    transform: translate3d(calc(var(--multiplier) * -1.77em), calc(var(--multiplier) * -0.44em), 0);
+  }
+  45% {
+    transform: translate3d(calc(var(--multiplier) * 1.54em), calc(var(--multiplier) * 1.62em), 0);
+  }
+  54% {
+    transform: translate3d(calc(var(--multiplier) * 1.38em), calc(var(--multiplier) * -0.77em), 0);
+  }
+  63% {
+    transform: translate3d(calc(var(--multiplier) * 1.75em), calc(var(--multiplier) * 1.18em), 0);
+  }
+  72% {
+    transform: translate3d(calc(var(--multiplier) * -0.94em), calc(var(--multiplier) * -1.90em), 0);
+  }
+  81% {
+    transform: translate3d(calc(var(--multiplier) * 1.70em), calc(var(--multiplier) * -0.37em), 0);
+  }
+  90% {
+    transform: translate3d(calc(var(--multiplier) * -1.64em), calc(var(--multiplier) * 0.66em), 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}

@@ -1,0 +1,60 @@
+.modal {
+  line-height: 1;
+  width: 100%;
+  height: 100%;
+  padding: 1.45% 2.9%;
+  background: linear-gradient(
+    to right,
+      var(--color--background1) 0%,
+      var(--color--background1) 2.7027%,
+      var(--color--background2) 2.7027%,
+      var(--color--background2) 16.21622%,
+      var(--color--background1) 16.21622%,
+      var(--color--background1) 29.72973%,
+      var(--color--background2) 29.72973%,
+      var(--color--background2) 43.24324%,
+      var(--color--background1) 43.24324%,
+      var(--color--background1) 56.75676%,
+      var(--color--background2) 56.75676%,
+      var(--color--background2) 70.27027%,
+      var(--color--background1) 70.27027%,
+      var(--color--background1) 83.78378%,
+      var(--color--background2) 83.78378%,
+      var(--color--background2) 97.2973%,
+      var(--color--background1) 97.2973%,
+      var(--color--background1) 100%
+  );
+}
+
+.modal-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1em;
+}
+
+.modal button {
+  padding: 0.5em;
+  margin: -0.5em;
+  outline: none;
+}
+
+::backdrop {
+  background: black;
+  opacity: 0.5;
+}
+
+.modal h2 {
+  text-transform: uppercase;
+}
+
+.modal ul {
+  padding-left: 1.15em;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+
+.modal li + li {
+  margin-top: 1em;
+}
