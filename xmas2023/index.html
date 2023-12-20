@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>See, Also — Season's Greetings</title>
+  <link rel="stylesheet" href="/xmas2023/assets/styles/main.css">
+  <link id="favicon" rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPScxLjEnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zycgdmlld0JveD0nMCAwIDEwMCAxMDAnPjxjaXJjbGUgc3R5bGU9J2ZpbGw6dmFyKC0tY29sb3ItLWJhY2tncm91bmQxKScgY3g9JzUwJyBjeT0nNTAnIHI9JzUwJyBzdHJva2Utd2lkdGg9JzAnLz48L3N2Zz4=">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+</head>
+<body>
+  <script>
+    const random = Math.ceil(Math.random() * 4);
+    document.body.classList.add(`variant-${ random }`);
+    const faviconLink = document.querySelector('link#favicon');
+    const faviconBase = atob(faviconLink.getAttribute('href').substring(26));
+    const faviconSvg = new DOMParser().parseFromString(faviconBase, 'image/svg+xml');
+    const faviconStyle = faviconSvg.documentElement.style;
+    const variantColor = getComputedStyle(document.body).getPropertyValue('--color--background2') || 'white';
+    faviconStyle.setProperty('--color--background1', variantColor);
+    const faviconReBase = new XMLSerializer().serializeToString(faviconSvg);
+    const faviconReUrl = `data:image/svg+xml;base64,${ btoa(faviconReBase) }`;
+    faviconLink.setAttribute('href', faviconReUrl);
+  </script>
+  <h1 class="large-heading">
+    <span>Season's</span>
+    <span>Greetings</span>
+  </h1>
+  <div class="scroll-text">
+    <span class="scroll-text__item">Scroll down</span>
+    <span class="scroll-text__item">A little more…</span>
+  </div>
+  <audio class="audio-player" src="/xmas2023/assets/audio/BWV608-organ.mp3" loop></audio>
+  <button class="audio-button"title="Play and pause music"><span>♪</span></button>
+  <section class="container" style="--l:1630"><div class="inner">
+    <div id="object1" class="object" style="--h:13.9;--w:45.3;--x:100;--y:80;--z:25;--g:20;--s:1.5"><img class="image"src="/xmas2023/assets/images/webp/0-1-parsnip.webp" width="653" height="200" alt=""></img></div>
+    <div id="object2" class="object" style="--h:71.3;--w:39.4;--x:0;--y:100;--z:25;--g:20;--s:2.6"><img class="image"src="/xmas2023/assets/images/webp/0-2-candle-h.webp" width="567" height="1026" alt=""></img></div>
+    <div id="object3" class="object" style="--h:45.5;--w:51.3;--x:50;--y:73;--z:25;--g:20;--s:1.8"><img class="image"src="/xmas2023/assets/images/webp/0-3-clementine.webp" width="738" height="655" alt=""></img></div>
+    <div id="object4" class="object" style="--h:13.5;--w:8.8;--x:100;--y:49;--z:25;--g:120;--s:2.4"><img class="image"src="/xmas2023/assets/images/webp/1-1-apples.webp" width="126" height="194" alt=""></img></div>
+    <div id="object5" class="object" style="--h:20.3;--w:26.4;--x:21;--y:21;--z:25;--g:20;--s:1.8"><img class="image"src="/xmas2023/assets/images/webp/1-2-pears.webp" width="380" height="293" alt=""></img></div>
+    <div id="object6" class="object" style="--h:10.3;--w:29.4;--x:87;--y:100;--z:25;--g:20;--s:1.5"><img class="image"src="/xmas2023/assets/images/webp/1-3-figs.webp" width="424" height="149" alt=""></img></div>
+    <div id="object7" class="object" style="--h:7.6;--w:9.4;--x:51;--y:10;--z:25;--g:20;--s:1.5"><img class="image"src="/xmas2023/assets/images/webp/1-4-walnuts.webp" width="135" height="109" alt=""></img></div>
+    <div id="object8" class="object" style="--h:29.2;--w:36.7;--x:61;--y:89;--z:25;--g:120;--s:1.5"><img class="image"src="/xmas2023/assets/images/webp/2-1-kitten.webp" width="529" height="420" alt=""></img></div>
+    <div id="object9" class="object" style="--h:19.8;--w:26.5;--x:12;--y:69;--z:25;--g:20;--s:2.2"><img class="image"src="/xmas2023/assets/images/webp/2-2-doves.webp" width="381" height="285" alt=""></img></div>
+    <div id="object10" class="object" style="--h:26.2;--w:9.8;--x:0;--y:100;--z:25;--g:120;--s:2"><img class="image"src="/xmas2023/assets/images/webp/3-1-wineglass.webp" width="141" height="377" alt=""></img></div>
+    <div id="object11" class="object" style="--h:33.3;--w:29.9;--x:100;--y:110;--z:25;--g:20;--s:1.5"><img class="image"src="/xmas2023/assets/images/webp/3-2-bowl-hand.webp" width="430" height="480" alt=""></img></div>
+    <div id="object12" class="object" style="--h:22.4;--w:31;--x:14;--y:100;--z:25;--g:120;--s:1.5"><img class="image"src="/xmas2023/assets/images/webp/4-1-cranberry-bowl.webp" width="446" height="323" alt=""></img></div>
+    <div id="object13" class="object" style="--h:71.3;--w:39.4;--x:0;--y:100;--z:25;--g:20;--s:2.6"><img class="image"src="/xmas2023/assets/images/webp/4-2-flame.webp" width="567" height="1026" alt=""></img></div>
+    <div id="object14" class="object" style="--h:9.2;--w:22.4;--x:0;--y:100;--z:25;--g:120;--s:1.5"><img class="image"src="/xmas2023/assets/images/webp/5-1-slippers.webp" width="322" height="132" alt=""></img></div>
+    <div id="object15" class="object" style="--h:26.8;--w:24.6;--x:99;--y:4;--z:25;--g:20;--s:1.9"><img class="image"src="/xmas2023/assets/images/webp/5-2-drum.webp" width="354" height="386" alt=""></img></div>
+    <div id="object16" class="object" style="--h:8.1;--w:29.4;--x:24;--y:0;--z:25;--g:120;--s:1.8"><img class="image"src="/xmas2023/assets/images/webp/6-1-paper-chain02.webp" width="423" height="117" alt=""></img></div>
+    <div id="object17" class="object" style="--h:8.1;--w:29.4;--x:64;--y:0;--z:25;--g:20;--s:1.8"><img class="image"src="/xmas2023/assets/images/webp/6-2-paper-chain01.webp" width="423" height="117" alt=""></img></div>
+    <div id="object18" class="object" style="--h:36.4;--w:20.8;--x:100;--y:0;--z:25;--g:120;--s:2.2"><img class="image"src="/xmas2023/assets/images/webp/7-1-mistletoe.webp" width="299" height="524" alt=""></img></div>
+    <div id="object19" class="object" style="--h:31.8;--w:29.9;--x:33;--y:0;--z:25;--g:20;--s:1.5"><img class="image"src="/xmas2023/assets/images/webp/7-2-holly.webp" width="431" height="458" alt=""></img></div>
+    <div id="object20" class="object" style="--h:14.2;--w:16.7;--x:0;--y:27;--z:25;--g:120;--s:1.5"><img class="image"src="/xmas2023/assets/images/webp/8-1-red-bow.webp" width="241" height="204" alt=""></img></div>
+    <div id="object21" class="object" style="--h:15.1;--w:22;--x:45;--y:43;--z:25;--g:20;--s:2.2"><img class="image"src="/xmas2023/assets/images/webp/8-2-pink-bow.webp" width="317" height="217" alt=""></img></div>
+    <div id="object22" class="object" style="--h:10.8;--w:14.2;--x:84;--y:49;--z:25;--g:120;--s:1.5"><img class="image"src="/xmas2023/assets/images/webp/9-1-star03.webp" width="205" height="155" alt=""></img></div>
+    <div id="object23" class="object" style="--h:10.1;--w:10.7;--x:102;--y:63;--z:25;--g:20;--s:2.4"><img class="image"src="/xmas2023/assets/images/webp/9-2-star02.webp" width="154" height="145" alt=""></img></div>
+    <div id="object24" class="object" style="--h:10.1;--w:9;--x:11;--y:41;--z:25;--g:20;--s:1.5"><img class="image"src="/xmas2023/assets/images/webp/9-3-star01.webp" width="130" height="145" alt=""></img></div>
+  </div></section>
+  <section class="spacer" style="display:none"></section>
+  <section class="final">
+    <div class="greeting-text">
+      <div>… & Happy holidays! A&nbsp;greeting that’s a little OTT & all over the place because hey, who else is feeling the same lately?<br>Love See,&nbsp;Also</div>
+    </div>
+    <footer class="">
+      <div class="">Web design & dev by <a href="https://www.see-also.com/">See,&nbsp;Also</a>&nbsp;(2023)</div>
+      <button class="modal-button">View credits</button>
+    </footer>
+    <dialog class="modal credits">
+      <div class="modal-wrapper">
+        <h2>Credits</h2>
+        <p>Music: J.S. Bach — In dulci jubilo, BWV608</p>
+        <h3>Paintings:</h3>
+        <ul>
+          <li>Adriaen van Utrecht — Banquet Still Life, 1644</li>
+          <li>Antoine Pesne — Prinzessin Elisabeth Christine von Preußen, 1738</li>
+          <li>C Müller — Weihnachtsbaum, 1914</li>
+          <li>Conrad Faber von Kreuznach — Double Portrait of Justinian von Holzhausen and His Wife Anna, née Fürstenberg, 1536</li>
+          <li>Eva Gonzalès — The Pink Slippers, 1880</li>
+          <li>François Boucher — Vénus et Cupidon c. 1751</li>
+          <li>Henri Rousseau — The Pink Candle, 1908</li>
+          <li>Jacob Ferdinand Voet (attributed to) — Portrait of a gentleman, bust-length, in a red bow tie, c. 1639-1700</li>
+          <li>Jean-Baptiste-Siméon Chardin — Pears, Walnuts and Glass of Wine, c. 1768</li>
+          <li>John F. Francis — Still Life, Apples and Chestnuts, 1859</li>
+          <li>Juan Sánchez Cotán — Still Life with Game, Vegetables and Fruit, 1602</li>
+          <li>Karl Reichert — Playful kittens, 1890</li>
+          <li>Martinus Nellius — Stilleben mit Zitrone und Weinglas, Vögeln und Schmetterlingen, c. 1674-1719</li>
+          <li>Mansel Lewis — Christmas Morning, 1885</li>
+          <li>Mary Vaux Walcott — American Mistletoe (Phoradendron flavescens), 1923</li>
+          <li>Pieter Claesz — Still Life with Lighted Candle, 1627</li>
+          <li>Severin Roesen — Still Life with Fruit and Wine Glass, 1861</li>
+          <li>Unknown — Boy With Drum (Rudolf Andersen), c. 1850</li>
+          <li>Unknown Italian — Still Life with Figs, c. 1600</li>
+          <li>Willem Claesz Heda (attributed to) — Still Life with Nautilus Cup, 1640</li>
+          <li>Willem Wenckebach — Ster schijnt op een winterlandschap, est. 1893</li>
+          <li>William — Catto Holly, 1912</li>
+        </ul>
+        <p>All via <a href="https://commons.wikimedia.org/wiki/Main_Page" target="_blank">Wikimedia Commons</a></p>
+        <button autofocus>(Close)</button>
+      </div>
+    </dialog>
+    <img class="visual-fluff" src="/xmas2023/assets/images/webp/dog.webp" width="366" height="388" alt="Cutout of a dog">
+  </section>
+  <script>
+    const first = document.querySelector(`#object${ Math.ceil(Math.random() * 3) }`);
+    first.parentNode.prepend(first);
+
+    const controller = new ScrollMagic.Controller();
+    const fadeImages = new ScrollMagic.Scene({
+      duration: document.querySelector('.container').offsetHeight, 
+    })
+    .setPin('.inner');
+
+    const imageTl = gsap.timeline();
+    const images = document.querySelectorAll('.container .object');
+    images.forEach(function(el, i) {
+      const first = (i === 0);
+      const startingOpacity = first ? 1 : 0;
+      const duration = first ? 0 : 25;
+      const delay = el.getAttribute('data-delay') || 25;
+      imageTl.fromTo(el, {opacity: startingOpacity}, {duration: duration, opacity: 1}, ">" + delay);
+    });
+
+    imageTl.to('.scroll-text > *:nth-child(1)', {duration: 25, opacity: 0}, '<-330');
+    imageTl.to('.scroll-text > *:nth-child(2)', {duration: 25, opacity: 1}, '<');
+    imageTl.to('.container .object', {duration: 50, opacity: 0}, '+=150');
+    imageTl.to('.scroll-text', {duration: 25, opacity: 0}, '+=50');
+    imageTl.to('.audio-button', {duration: 25, opacity: 0}, '<');
+
+    fadeImages.setTween(imageTl)
+    .addTo(controller);
+  </script>
+  <script src="/xmas2023/assets/js/main.js" type="module"></script>
+</body>
+</html>

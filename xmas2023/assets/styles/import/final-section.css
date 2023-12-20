@@ -1,0 +1,49 @@
+
+.final {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  position: relative;
+  margin-top: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.greeting-text {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.greeting-text > * {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 10.03em;
+  padding: 1.8em 0.25em;
+  background-color: var(--color--background1);
+}
+
+.visual-fluff {
+  --h:10;
+  --w:10;
+  --x:-1.75;
+  --y:91;
+  --z:120;
+  --s:1.2;
+
+  position: absolute;
+  width: calc(var(--w) * 1vw);
+  height: calc(var(--h) * 1vw);
+  left: calc(var(--x) * 1%);
+  top: calc(var(--y) * 1%);
+  pointer-events: initial;
+  z-index: var(--z);
+  object-fit: contain;
+  object-position: left;
+  transform-origin: calc(var(--x) * 1%) calc(var(--y) * 1%);
+  transform: translate(calc(var(--x) * -1%), calc(var(--y) * -1%)) scale(var(--s));
+}

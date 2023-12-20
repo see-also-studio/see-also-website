@@ -1,0 +1,96 @@
+body {
+  font-family: var(--font--normal);
+  line-height: 1.2;
+}
+
+.large-heading {
+  font-size: min(19vw, 1562%);
+  color: var(--color--text1);
+}
+
+.scroll-text {
+  font-size: min(9.7vw, 812.5%);
+  font-family: var(--font--script);
+  color: var(--color--text1);
+}
+
+.greeting-text {
+  font-family: var(--font--normal);
+  line-height: 1.2;
+  color: var(--color--text1);
+  text-align: center;
+}
+
+footer {
+  color: var(--color--text1);
+}
+
+@media (max-width: 575px) {
+  .scroll-text {
+    font-size: max(12.7vw, 375%);
+  }
+
+  .greeting-text {
+    font-size: 200%;
+  }
+
+  .greeting-text.custom {
+    font-size: 150%;
+  }
+
+  footer {
+    font-size: 88%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 799px) {
+  .scroll-text {
+    font-size: 11.2vw;
+  }
+
+  .greeting-text{
+    font-size: 5.5vw;
+  }
+
+  .greeting-text.custom {
+    font-size: 4.5vw;
+  }
+
+  footer {
+    font-size: 100%;
+  }
+}
+
+@media (min-width: 800px) {
+  .scroll-text {
+    font-size: min(9.7vw, 812.5%);
+  }
+
+  .greeting-text {
+    font-size: min(4.5vw, 406.25%);
+  }
+
+  .greeting-text.custom {
+    font-size: min(3.75vw, 375%);
+  }
+
+  footer {
+    font-size: 106.25%;
+  }
+}
+
+.credits {
+  color: var(--color--text1);
+}
+
+@media (max-width: 799px) {
+  .credits {
+    font-size: 120%;
+  }
+}
+
+@media (min-width: 800px) {
+  .credits {
+    font-size: 212.5%;
+  }
+}

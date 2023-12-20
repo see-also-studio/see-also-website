@@ -1,0 +1,32 @@
+:root {
+  --font--normal: "Inter", sans-serif;
+  --font--script: "Imperial Script", cursive;
+}
+
+body.variant-1 {
+  --color--background1: #847A26;
+  --color--background2: #D5C799;
+  --color--text1: #FFFFFF;
+  --color--text2: #FFFFFF;
+}
+
+body.variant-2 {
+  --color--background1: #742504;
+  --color--background2: #AC6958;
+  --color--text1: #FFFFFF;
+  --color--text2: #FFFFFF;
+}
+
+body.variant-3 {
+  --color--background1: #8A7952;
+  --color--background2: #BD9FAB;
+  --color--text1: #FFFFFF;
+  --color--text2: #FFFFFF;
+}
+
+body.variant-4 {
+  --color--background1: #7B77A6;
+  --color--background2: #A1801A;
+  --color--text1: #FFFFFF;
+  --color--text2: #FFFFFF;
+}
