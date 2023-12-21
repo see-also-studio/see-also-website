@@ -5,6 +5,7 @@ body {
 
 .large-heading {
   font-size: min(19vw, 1562%);
+  font-weight: 700;
   color: var(--color--text1);
 }
 
@@ -22,7 +23,12 @@ body {
 }
 
 footer {
+  font-weight: 700;
   color: var(--color--text1);
+}
+
+dialog {
+  font-weight: 700;
 }
 
 @media (max-width: 575px) {
