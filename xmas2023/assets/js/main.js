@@ -12,7 +12,7 @@ const name = unscramble(nameScrambled);
 if (verify) {
   const greetingTextContainer = document.querySelector('.greeting-text > div');
   greetingTextContainer.parentNode.classList.add('custom');
-  greetingTextContainer.innerHTML = `Dear ${name}. Happy holidays! A&nbsp;little greeting to you that's a bit OTT & all over because hey, holiday spirit? Wishing you & yours a lovely festive time & a really good new year ahead.<br>See,&nbsp;Also x`;
+  greetingTextContainer.innerHTML = `Dear ${name}––Happy holidays. A&nbsp;festive greeting from us that's a little OTT & all over the place because hey, holiday spirit? Wishing you & yours a warm winters-break & a good new year ahead.<br>Love & thanks! See,&nbsp;Also`;
 }
 
 /**
