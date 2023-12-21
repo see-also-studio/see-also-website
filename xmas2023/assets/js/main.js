@@ -39,6 +39,8 @@ closeModalButton.addEventListener('click', function() {
   modal.close();
 });
 
-modal.addEventListener('click', function() {
-  modal.close();
+modal.addEventListener('click', function(e) {
+  if (e.target.nodeName !== 'A') {
+    modal.close();
+  }
 });
