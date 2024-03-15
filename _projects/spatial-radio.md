@@ -1,8 +1,8 @@
 ---
-title: "Publication & research"
-x:
-details: "Web concept, design & development, branding, PDF design"
-link: "https://www.colouring-in.com/"
+title: "Radio"
+x: "See, Also × Central Saint Martins (Spatial Practices)"
+details: "Web design & development"
+link: "https://spatialradio.live/"
 
 order: 1
 

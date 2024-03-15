@@ -1,21 +1,19 @@
 ---
-title: "Aisling M O'Carroll"
-order: 4
-year: 2020
-#yearEnd: "ongoing"
-tags: 
-  - "Website"
-  - "Branding"
+title: "Portfolio"
+x:
+details: "Web concept, design & development, branding"
+link: "https://amocarroll.com/"
+
+order: 1
+
 color: 
-  - "#CFCDC9"
-  - "#726326"
+  - "#000000"
+
 media: 
 # Each entry must list file name, height and width, alt text (optional)
-# -
-#   href: "dir-name/filename"
-#   height: 800
-#   width: 600
-#   alt: ""
+#   -
+#     href: "projects/project-dir/file-name.extention"
+#     height: 800
+#     width: 600
+#     alt: ""
 ---
-[Web address](https://amocarroll.com/){:target="_blank" rel="noopener"}.
-Web design and development.

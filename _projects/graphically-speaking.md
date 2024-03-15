@@ -1,20 +1,19 @@
 ---
-title: "Graphically Speaking"
-order: 3
-year: 2017
-#yearEnd: "ongoing"
-tags: 
-  - "Exhibition"
-  - "Broadcast"
+title: "Broadcast & exhibition"
+x: "See, Also × Central Saint Martins (MA Graphic Communication Design)"
+details: "Web concept, design & development, creative direction"
+link: "https://graphicallyspeaking.co.uk/"
+
+order: 1
+
 color: 
-  - "#0000FF"
+  - "#000000"
+
 media: 
 # Each entry must list file name, height and width, alt text (optional)
-# -
-#   href: "dir-name/filename"
-#   height: 800
-#   width: 600
-#   alt: ""
+#   -
+#     href: "projects/project-dir/file-name.extention"
+#     height: 800
+#     width: 600
+#     alt: ""
 ---
-[Web address](https://graphicallyspeaking.co.uk/){:target="_blank" rel="noopener"}.
-'Graphically Speaking' was a live broadcast and exhibition at Central Saint Martins. The website broadcast the livestreams of student interviews, whilst hosting broadcast times and information. The website now serves as an archive of the broadcasts and exhibition.

@@ -1,8 +1,8 @@
 ---
-title: "Publication & research"
-x:
-details: "Web concept, design & development, branding, PDF design"
-link: "https://www.colouring-in.com/"
+title: "Education"
+x: "See, Also × UCL"
+details: "Web concept, design & development"
+link:
 
 order: 1
 

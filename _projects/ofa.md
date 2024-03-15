@@ -1,8 +1,8 @@
 ---
-title: "Publication & research"
+title: "Portfolio"
 x:
-details: "Web concept, design & development, branding, PDF design"
-link: "https://www.colouring-in.com/"
+details: "Web concept & design"
+link:
 
 order: 1
 

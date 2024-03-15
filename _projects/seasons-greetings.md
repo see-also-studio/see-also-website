@@ -1,8 +1,8 @@
 ---
-title: "Publication & research"
+title: "Seasonal greetings"
 x:
-details: "Web concept, design & development, branding, PDF design"
-link: "https://www.colouring-in.com/"
+details: "Web concept, design & development, creative direction"
+link:
 
 order: 1
 

@@ -1,22 +1,19 @@
 ---
-title: "Unknown Quantities / Website, creative digital branding, digital workshops"
+title: "Publication & education"
+x: "See, Also × Central Saint Martins (MA Graphic Communication Design)"
+details: "Web design & development, digital workshops"
+link: "https://uqjournal.net/"
+
 order: 1
-#year: 
-#yearEnd: "ongoing"
-#tags: 
-# - "Website"
-# - "creative digital branding"
-# - "digital workshops"
-# - "archive" 
-# - "education"
+
 color: 
-  - "#FFFFFF"
+  - "#000000"
+
 media: 
 # Each entry must list file name, height and width, alt text (optional)
-# -
-#   href: "dir-name/filename"
-#   height: 800
-#   width: 600
-#   alt: ""
+#   -
+#     href: "projects/project-dir/file-name.extention"
+#     height: 800
+#     width: 600
+#     alt: ""
 ---
-Online archive, website and digital workflow process for an annual experimental publication from Central Saint Martins' MA Graphic Communication Design × MA Culture, Criticism and Curation

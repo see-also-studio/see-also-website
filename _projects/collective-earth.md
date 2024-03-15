@@ -1,8 +1,8 @@
 ---
-title: "Publication & research"
+title: "Education, research project"
 x:
-details: "Web concept, design & development, branding, PDF design"
-link: "https://www.colouring-in.com/"
+details: "Web concept, design & development"
+link: "https://collective-earth.world/"
 
 order: 1
 

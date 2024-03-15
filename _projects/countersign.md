@@ -1,21 +1,19 @@
 ---
-title: "Countersign"
-order: 7
-year: 2020
-#yearEnd: "ongoing"
-tags: 
-  - "Website"
-  - "Branding"
-  - "Sound recording"
+title: "Podcast"
+x:
+details: "Web concept, design & development, branding, creative direction"
+link: "https://countersignisapodcast.com/"
+
+order: 1
+
 color: 
-  - "#082C7C"
+  - "#000000"
+
 media: 
 # Each entry must list file name, height and width, alt text (optional)
-# -
-#   href: "dir-name/filename"
-#   height: 800
-#   width: 600
-#   alt: ""
+#   -
+#     href: "projects/project-dir/file-name.extention"
+#     height: 800
+#     width: 600
+#     alt: ""
 ---
-[Web address](https://countersignisapodcast.com/){:target="_blank" rel="noopener"}.
-Creative direction on a new law-based podcast.
