@@ -1,42 +1,48 @@
 {%- if include.content.href  -%}
-  {%- assign hrefSplit = include.content.href | split: "." -%}
-  {%- assign fileExt = hrefSplit | last | prepend: "." -%}
-  {%- assign arrayLength = hrefSplit | size | minus: 1 -%}
-  {%- assign fileName = hrefSplit | slice: 0, arrayLength | join: "." -%}
-  {%- if fileExt == ".jpg" or fileExt == ".jpeg" or fileExt == ".png" or fileExt == ".gif"  -%}
-    <img alt="{{ include.content.alt }}"
-      sizes = "(max-width: 659px) 60vw, 40vw"
-      {%- assign setWidth = 640 -%}
-      {% if include.content.width > setWidth %}
-        srcset="/dist-images/{{ fileName }}-{{ setWidth}}{{ fileExt }} {{ setWidth}}w
-        {%- assign setWidth = 768 -%}
-        {%- if include.content.width > setWidth -%}
-          , /dist-images/{{ fileName }}-{{ setWidth}}{{ fileExt }} {{ setWidth}}w
-        {%- endif -%}
-        {%- assign setWidth = 1024 -%}
-        {%- if include.content.width > setWidth -%}
-          , /dist-images/{{ fileName }}-{{ setWidth}}{{ fileExt }} {{ setWidth}}w
-        {%- endif -%}
-        {%- assign setWidth = 1366 -%}
-        {%- if include.content.width > setWidth -%}
-          , /dist-images/{{ fileName }}-{{ setWidth}}{{ fileExt }} {{ setWidth}}w
-        {%- endif -%}
-        {%- assign setWidth = 1600 -%}
-        {%- if include.content.width > setWidth -%}
-          , /dist-images/{{ fileName }}-{{ setWidth}}{{ fileExt }} {{ setWidth}}w
-        {%- endif -%}
-        "
-      {% endif %}
-      src="/assets/{{ include.content.href }}" 
-      {% if include.content.height %}height="{{ include.content.height }}"{% endif %}
-      {% if include.content.height %}width="{{ include.content.width }}"{% endif %}
-      loading="lazy">
-  {%- elsif fileExt = ".mp4" -%}
-    <video src="{{ include.content.href }}"
-      type="video/mp4"
-      alt="include.content.alt"
-      autoplay muted preload>
-      Sorry, your browser doesn't support embedded videos.
-    </video>
+{%- assign hrefSplit = include.content.href | split: "." -%}
+{%- assign fileExt = hrefSplit | last | prepend: "." -%}
+{%- assign arrayLength = hrefSplit | size | minus: 1 -%}
+{%- assign fileName = hrefSplit | slice: 0, arrayLength | join: "." -%}
+
+{%- if fileExt == ".jpg" or fileExt == ".jpeg" or fileExt == ".png" or fileExt == ".gif"  -%}
+<img alt="{{ include.content.alt }}"
+  {%- assign setWidth = 640 -%}
+  {% if include.content.width and include.content.width != "" and include.content.width > setWidth %}
+  sizes = "(max-width: 659px) 60vw, 40vw"
+  srcset="/.netlify/images/?url=/images/{{ include.content.href }}&width={{ setWidth }} {{ setWidth}}w
+  {%- assign setWidth = 768 -%}
+  {%- if include.content.width > setWidth -%}
+  , /.netlify/images/?url=/images/{{ include.content.href }}&width={{ setWidth }} {{ setWidth}}w
   {%- endif -%}
+  {%- assign setWidth = 1024 -%}
+  {%- if include.content.width > setWidth -%}
+  , /.netlify/images/?url=/images/{{ include.content.href }}&width={{ setWidth }} {{ setWidth}}w
+  {%- endif -%}
+  {%- assign setWidth = 1366 -%}
+  {%- if include.content.width > setWidth -%}
+  , /.netlify/images/?url=/images/{{ include.content.href }}&width={{ setWidth }} {{ setWidth}}w
+  {%- endif -%}
+  {%- assign setWidth = 1600 -%}
+  {%- if include.content.width > setWidth -%}
+  , /.netlify/images/?url=/images/{{ include.content.href }}&width={{ setWidth }} {{ setWidth}}w
+  {%- endif -%}
+  "
+  {% endif %}
+  src="/assets/{{ include.content.href }}" 
+  loading="lazy"
+  width="{{ include.content.width }}"
+  height="{{ include.content.height }}"
+  onerror="this.onerror=null;this.removeAttribute('srcset')"
+>
+{%- elsif fileExt = ".mp4" -%}
+<video src="/assets/{{ include.content.href }}"
+  type="video/mp4"
+  alt="include.content.alt"
+  {% if include.content.width & include.content.width != "" & include.content.height & include.content.height != "" %}
+  width="{{ include.content.width }}"
+  height="{{ include.content.height }}"
+  {% endif %}
+  autoplay loop muted preload>
+</video>
+{%- endif -%}
 {%- endif -%}
