@@ -2,19 +2,17 @@
 # @string
 title: "Example project typed"
 
+# @string (optional)
+x: "See, Also × Collaborator"
+
+# @string
+details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+
+# @string
+link: "https://example.com/"
+
 # @int
 order: 1
-
-# @int
-year: 2022
-
-# (optional) @string
-# yearEnd: ongoing
-
-# @array
-tags: 
-  - "Wesbite"
-  - "Branding"
 
 # @array
 color: 
@@ -23,16 +21,16 @@ color:
 # @array
 media: 
 # Each entry must list file name, height and width, alt text (optional)
-# -
-#   @string
-#   href: "dir-name/filename"
+#   -
+#     @string
+#     href: "dir-name/filename.ext"
 #
-#   @int
-#   height: 800
-#   width: 600
+#     @int
+#     height: 800
+#     width: 600
 #
-#   @string
-#   alt: ""
+#     @string (optional)
+#     alt: ""
 #
   -
     href: "projects/test-project/Mercury_in_color_-_Prockter07-edit1.jpg"
@@ -50,5 +48,3 @@ media:
     width: 2205
     alt: ""
 ---
-[Other project](/projects/test-project/)
-Ut consequatur illum consequatur ducimus. Suscipit blanditiis mollitia et ut excepturi nesciunt fuga in. Est laboriosam aperiam qui. Debitis fugit repellat dignissimos. Ab aliquam natus nisi laudantium. Nam ipsa illo dolorem id nobis qui.
