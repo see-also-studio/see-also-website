@@ -32,7 +32,7 @@
   loading="lazy"
   width="{{ include.content.width }}"
   height="{{ include.content.height }}"
-  onerror="this.onerror=null;this.removeAttribute('srcset')"
+  onerror="this.onerror=null;this.setAttribute('data-srcset', this.getAttribute('srcset'));this.removeAttribute('srcset')"
   {% if include.content.backgroundColor & include.content.backgroundColor != "" %}
   style="background-color:{{ include.content.backgroundColor }}"
   {% endif %}
