@@ -45,6 +45,9 @@
   width="{{ include.content.width }}"
   height="{{ include.content.height }}"
   {% endif %}
+  {% if include.content.title & include.content.title != "" %}
+  title="{{ include.content.title }}"
+  {% endif %}
   autoplay loop muted preload>
 </video>
 {%- endif -%}
