@@ -5,8 +5,7 @@
   "private": true,
   "scripts": {
     "build": "webpack --config src/webpack.prod.js",
-    "watch": "webpack --watch --config src/webpack.dev.js",
-    "images": "gulp"
+    "watch": "webpack --watch --config src/webpack.dev.js"
   },
   "author": "See, Also",
   "license": "ISC",
