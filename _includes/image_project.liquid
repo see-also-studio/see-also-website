@@ -9,22 +9,22 @@
   {%- assign setWidth = 640 -%}
   {% if include.content.width and include.content.width != "" and include.content.width > setWidth %}
   sizes = "(max-width: 659px) 60vw, 40vw"
-  srcset="/.netlify/images/?url=/images/{{ include.content.href }}&width={{ setWidth }} {{ setWidth}}w
+  srcset="/.netlify/images/?url=/assets/{{ include.content.href }}&width={{ setWidth }} {{ setWidth}}w
   {%- assign setWidth = 768 -%}
   {%- if include.content.width > setWidth -%}
-  , /.netlify/images/?url=/images/{{ include.content.href }}&width={{ setWidth }} {{ setWidth}}w
+  , /.netlify/images/?url=/assets/{{ include.content.href }}&width={{ setWidth }} {{ setWidth}}w
   {%- endif -%}
   {%- assign setWidth = 1024 -%}
   {%- if include.content.width > setWidth -%}
-  , /.netlify/images/?url=/images/{{ include.content.href }}&width={{ setWidth }} {{ setWidth}}w
+  , /.netlify/images/?url=/assets/{{ include.content.href }}&width={{ setWidth }} {{ setWidth}}w
   {%- endif -%}
   {%- assign setWidth = 1366 -%}
   {%- if include.content.width > setWidth -%}
-  , /.netlify/images/?url=/images/{{ include.content.href }}&width={{ setWidth }} {{ setWidth}}w
+  , /.netlify/images/?url=/assets/{{ include.content.href }}&width={{ setWidth }} {{ setWidth}}w
   {%- endif -%}
   {%- assign setWidth = 1600 -%}
   {%- if include.content.width > setWidth -%}
-  , /.netlify/images/?url=/images/{{ include.content.href }}&width={{ setWidth }} {{ setWidth}}w
+  , /.netlify/images/?url=/assets/{{ include.content.href }}&width={{ setWidth }} {{ setWidth}}w
   {%- endif -%}
   "
   {% endif %}
