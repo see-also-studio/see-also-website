@@ -12,6 +12,8 @@ color:
   - "#CFCDC9"
   - "#726326"
 
+backgroundColor: "black"
+
 media: 
 # Each entry must list file name, height and width, alt text (optional)
   -
@@ -19,6 +21,7 @@ media:
     height: 1950
     width: 1950
     alt: ""
+    backgroundColor: "black"
   - 
     href: "projects/test-project/Neptune_-_Voyager_2_(29347980845)_flatten_crop.jpg"
     height: 1000
@@ -29,4 +32,5 @@ media:
     height: 2205
     width: 2205
     alt: ""
+    backgroundColor: "black"
 ---

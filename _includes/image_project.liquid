@@ -33,6 +33,9 @@
   width="{{ include.content.width }}"
   height="{{ include.content.height }}"
   onerror="this.onerror=null;this.removeAttribute('srcset')"
+  {% if include.content.backgroundColor & include.content.backgroundColor != "" %}
+  style="background-color:{{ include.content.backgroundColor }}"
+  {% endif %}
 >
 {%- elsif fileExt = ".mp4" -%}
 <video src="/assets/{{ include.content.href }}"

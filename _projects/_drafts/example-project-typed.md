@@ -18,6 +18,9 @@ order: 1
 color: 
   - "#082C7C"
 
+# @string
+backgroundColor: "black"
+
 # @array
 media: 
 # Each entry must list file name, height and width, alt text (optional)
@@ -34,6 +37,9 @@ media:
 #
 #     @string (optional)
 #     title: ""
+#
+#     @string (optional)
+#     backgroundColor: ""
   -
     href: "projects/test-project/Mercury_in_color_-_Prockter07-edit1.jpg"
     height: 1950

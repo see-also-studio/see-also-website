@@ -9,6 +9,8 @@ order: 1
 color: 
   - "#000000"
 
+backgroundColor: "black"
+
 media: 
 # Each entry must list file name, height and width, alt text (optional)
 #   -
@@ -17,4 +19,5 @@ media:
 #     width: 600
 #     alt: ""
 #     title: ""
+#     backgroundColor: ""
 ---

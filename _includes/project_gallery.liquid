@@ -1,4 +1,6 @@
-<div class="project__gallery gallery">
+<div class="project__gallery gallery"
+  {% if page.backgroundColor & page.backgroundColor != "" %}style="background-color:{{ page.backgroundColor }}"{% endif %}
+>
   <div class="gallery__inner">
     <ul class="gallery__wrapper swiper-wrapper">
       <li class="gallery__item swiper-slide"><!-- blank previous project navigation slide --></li>
