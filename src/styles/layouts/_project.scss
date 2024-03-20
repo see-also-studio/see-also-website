@@ -8,30 +8,33 @@
   }
   
   &__header {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 0.4em;
+    text-transform: uppercase;
   }
 
   &__title {
-    display: inline;
-
-    &::after {
-      content: ", ";
+    a {
+      &::after {
+        content: "↑";
+        display: inline-block;
+        margin-left: 0.2em;
+        transform: rotate(45deg);
+      }
     }
   }
 
-  &__tags {
-    display: flex;
-    flex-wrap: wrap;
-    column-gap: 0.4em;
+  &__x {
 
-    > * {
-      display: inline;
-      
-      &:not(:last-child)::after {
-        content: ", "
-      }
+  }
+
+  &__details {
+    font-size: 84%;
+
+    &::before {
+      content: "(";
+    }
+
+    &::after {
+      content: ")";
     }
   }
 }

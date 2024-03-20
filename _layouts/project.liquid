@@ -31,18 +31,20 @@ layout: default
   {% include project_gallery.liquid %}
 
   <div class="content project__content">
-    <div class="project__header">
-      <h2 class="project__title">{{ page.title }}</h2>
-      <span class="project__date">{{ page.year }}{% if page.yearEnd %}–⁠{{ page.yearEnd }}{% endif %}</span>
-    </div>
-    {% if page.tags %}
-    <ul class="project__tags">
-      {% for tag in page.tags %}
-      <li>{{ tag }}</li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-    {{ content }}
+
+    <div class="project__header">Information</div>
+
+    <h2 class="project__title">
+      {% if page.link and page.link != "" %}
+      <a href="{{ page.link }}" target="_blank">{{ page.title }}</a>
+      {% else %}
+      {{ page.title }}
+      {% endif %}
+    </h2>
+
+    {% if page.x and page.x != empty %}<div class="project__x">{{ page.x }}</div>{% endif %}
+
+    {% if page.details and page.details != empty %}<div class="project__details">{{ page.details }}</div>{% endif %}    
   </div>
 
 </div>

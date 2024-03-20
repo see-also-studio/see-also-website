@@ -1,21 +1,32 @@
 ---
 title: "Test page"
-order: 4
-year: 2020
-#yearEnd: "ongoing"
-tags: 
-  - "Website"
-  - "Branding"
+x:
+details:
+link:
+
+description: "This is a test project for the See Also website"
+
+order: 0
+
 color: 
   - "#CFCDC9"
   - "#726326"
+
 media: 
 # Each entry must list file name, height and width, alt text (optional)
--
-  href: "nothing.gif"
-  height: 400
-  width: 225
-  alt: ""
+  -
+    href: "projects/test-project/Mercury_in_color_-_Prockter07-edit1.jpg"
+    height: 1950
+    width: 1950
+    alt: ""
+  - 
+    href: "projects/test-project/Neptune_-_Voyager_2_(29347980845)_flatten_crop.jpg"
+    height: 1000
+    width: 1000
+    alt: ""
+  - 
+    href: "projects/test-project/OSIRIS_Mars_true_color.jpg"
+    height: 2205
+    width: 2205
+    alt: ""
 ---
-[Web address](https://no.com/){:target="_blank" rel="noopener"}.
-Web design and development.
