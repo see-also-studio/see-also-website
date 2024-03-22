@@ -8,6 +8,9 @@
 {%- if include.content.backgroundColor & include.content.backgroundColor != "" -%}
 {%- assign imageStyles = imageStyles | append: "background-color:" | append: include.content.backgroundColor | append: ";" -%}
 {%- endif -%}
+{%- if include.content.padding & include.content.padding != "" -%}
+{%- assign imageStyles = imageStyles | append: "padding:" | append: include.content.padding | append: ";" -%}
+{%- endif -%}
 
 {%- if fileExt == ".jpg" or fileExt == ".jpeg" or fileExt == ".png" or fileExt == ".gif"  -%}
 <img alt="{{ include.content.alt }}"
