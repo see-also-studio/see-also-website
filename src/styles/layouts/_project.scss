@@ -57,7 +57,7 @@ body[data-view="project"] {
       min-height: 16em;
 
       @include mq.mq($until: small) {
-        left: -38vw;
+        margin-left: -38vw;
         width: calc(38vw + 100%);
       }
     }
