@@ -4,6 +4,11 @@
 {%- assign arrayLength = hrefSplit | size | minus: 1 -%}
 {%- assign fileName = hrefSplit | slice: 0, arrayLength | join: "." -%}
 
+{%- assign imageStyles = "" -%}
+{%- if include.content.backgroundColor & include.content.backgroundColor != "" -%}
+{%- assign imageStyles = imageStyles | append: "background-color:" | append: include.content.backgroundColor | append: ";" -%}
+{%- endif -%}
+
 {%- if fileExt == ".jpg" or fileExt == ".jpeg" or fileExt == ".png" or fileExt == ".gif"  -%}
 <img alt="{{ include.content.alt }}"
   {%- assign setWidth = 640 -%}
@@ -33,8 +38,8 @@
   width="{{ include.content.width }}"
   height="{{ include.content.height }}"
   onerror="this.onerror=null;this.setAttribute('data-srcset', this.getAttribute('srcset'));this.removeAttribute('srcset')"
-  {% if include.content.backgroundColor & include.content.backgroundColor != "" %}
-  style="background-color:{{ include.content.backgroundColor }}"
+  {% if imageStyles != "" %}
+  style="{{ imageStyles }}"
   {% endif %}
 >
 {%- elsif fileExt = ".mp4" -%}

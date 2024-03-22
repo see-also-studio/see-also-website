@@ -1,5 +1,12 @@
+{%- assign galleryStyles = "" -%}
+{%- if page.backgroundColor & page.backgroundColor != "" -%}
+{%- assign galleryStyles = galleryStyles | append: "background-color:" | append: page.backgroundColor | append: ";" -%}
+{%- endif -%}
+{%- if page.textColor & page.textColor != "" -%}
+{%- assign galleryStyles = galleryStyles | append: "color:" | append: page.textColor | append: ";" -%}
+{%- endif -%}
 <div class="project__gallery gallery"
-  {% if page.backgroundColor & page.backgroundColor != "" %}style="background-color:{{ page.backgroundColor }}"{% endif %}
+  {% if galleryStyles != "" %}style="{{ galleryStyles }}"{% endif %}
 >
   <div class="gallery__inner">
     <ul class="gallery__wrapper swiper-wrapper">
@@ -17,5 +24,6 @@
     </ul>
     <button class="gallery__button gallery__button--prev" title="Previous image in gallery"></button>
     <button class="gallery__button gallery__button--next" title="Next image in gallery"></button>
+    <div class="gallery__pagination"></div>
   </div>
 </div>

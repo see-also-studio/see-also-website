@@ -2,6 +2,7 @@
 
 .gallery {
   margin-top: 2em;
+  color: white;
 
   @include mq.mq($until: small) {
     margin-bottom: 4em;
@@ -19,6 +20,15 @@
     align-items: stretch;
   }
 
+  &__pagination {
+    font-size: var(--font-size--large);
+    pointer-events: none;
+    position: absolute;
+    z-index: 50;
+    right: 0.45em;
+    bottom: 0.3em;
+  }
+
   &__item {
     height: auto;
 
@@ -34,6 +44,7 @@
     height: 100%;
     object-fit: contain;
     object-position: center center;
+    padding: 1.5em;
   }
 
   &__button {

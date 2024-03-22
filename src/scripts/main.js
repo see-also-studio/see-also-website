@@ -1,10 +1,11 @@
 import barba from '@barba/core';
 import gsap from 'gsap';
-import Swiper, { Navigation, EffectFade, Keyboard, Mousewheel, A11y } from 'swiper';
+import Swiper from 'swiper';
+import { Navigation, Pagination, EffectFade, Keyboard, Mousewheel, A11y } from 'swiper/modules';
 import { CustomBlockTime } from './components/time.js';
 import { CurrentWeather } from './components/weather.js';
 
-Swiper.use([Navigation, EffectFade, Keyboard, Mousewheel, A11y]);
+Swiper.use([Navigation, Pagination, EffectFade, Keyboard, Mousewheel, A11y]);
 
 console.log('main.js');
 
@@ -45,6 +46,16 @@ function initGallery() {
         nextEl: '.gallery__button--next',
         prevEl: '.gallery__button--prev',
         disabledClass: 'gallery__button--disabled',
+      },
+      pagination: {
+        el: '.gallery__pagination',
+        type: 'custom',
+        renderCustom: function(swiper, current, total) {
+          if (total <= 3) {
+            return '';
+          }
+          return `${ Math.min(Math.max(current - 1, 1), total - 2) }/${ total - 2 }`;
+        },
       },
       keyboard: {
         enabled: true,

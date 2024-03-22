@@ -14,12 +14,15 @@ link: "https://example.com/"
 # @int
 order: 1
 
-# @array
+# @array (optional)
 color: 
   - "#082C7C"
 
-# @string
+# @string (optional)
 backgroundColor: "black"
+
+# @string (optional)
+# textColor: "white"
 
 # @array
 media: 
