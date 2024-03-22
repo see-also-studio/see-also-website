@@ -38,14 +38,6 @@
 
   &__details {
     font-size: 84%;
-
-    &::before {
-      content: "(";
-    }
-
-    &::after {
-      content: ")";
-    }
   }
 }
 
