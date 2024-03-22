@@ -1,7 +1,7 @@
 ---
-title: "Education, research project"
+title: "Art-installation project website"
 x:
-details: "Web concept, design & development"
+details: "Web concept, web design, web development"
 link: "https://collective-earth.world/"
 
 order: 1

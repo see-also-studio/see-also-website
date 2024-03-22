@@ -1,7 +1,7 @@
 ---
-title: "Portfolio"
+title: "Portfolio website"
 x:
-details: "Web concept, design & development"
+details: "Web concept, web design, web development"
 link: "https://davidjamesroberts.com/dev"
 
 order: 1

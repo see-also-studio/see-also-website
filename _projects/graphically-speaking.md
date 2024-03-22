@@ -1,7 +1,7 @@
 ---
-title: "Broadcast & exhibition"
+title: "Exhibition online broadcast & archive"
 x: "See, Also × Central Saint Martins (MA Graphic Communication Design)"
-details: "Web concept, design & development, creative direction"
+details: "Web concept, web design, web development"
 link: "https://graphicallyspeaking.co.uk/"
 
 order: 1

@@ -1,7 +1,7 @@
 ---
-title: "Education"
+title: "Academic research website"
 x: "See, Also × UCL"
-details: "Web concept, design & development"
+details: "Web concept, web design, web development"
 link:
 
 order: 1

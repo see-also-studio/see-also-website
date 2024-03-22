@@ -1,7 +1,7 @@
 ---
-title: "Radio"
+title: "Radio website"
 x: "See, Also × Central Saint Martins (Spatial Practices)"
-details: "Web design & development"
+details: "Web design, web development"
 link: "https://spatialradio.live/"
 
 order: 1

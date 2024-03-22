@@ -1,7 +1,7 @@
 ---
-title: "Community"
+title: "Community project website"
 x: "See, Also × Latin Elephant"
-details: "Web concept, design & development"
+details: "Web concept, web design, web development"
 link: "https://latinelephant.org/walkingtheelephant/"
 
 order: 1

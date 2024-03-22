@@ -1,7 +1,7 @@
 ---
-title: "Portfolio"
+title: "Portfolio website"
 x:
-details: "Web concept, design & development, branding"
+details: "Web concept, web design, web development, branding"
 link: "https://amocarroll.com/"
 
 order: 1

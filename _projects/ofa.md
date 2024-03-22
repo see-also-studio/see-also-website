@@ -1,7 +1,7 @@
 ---
-title: "Portfolio"
+title: "Portfolio website"
 x:
-details: "Web concept & design"
+details: "Web concept, web design"
 link:
 
 order: 1
