@@ -13,10 +13,20 @@
 
   &__title {
     a {
-      &::after {
+      display: inline-block;
+
+      span {
+        text-transform: uppercase;
+        font-size: 66%;
+        display: inline-block;
+        transform: translateY(-0.12em);
+      }
+
+      &::before {
         content: "↑";
         display: inline-block;
-        margin-left: 0.2em;
+        margin-left: 0.45em;
+        margin-right: 0.25em;
         transform: rotate(45deg);
       }
     }

@@ -35,11 +35,8 @@ layout: default
     <div class="project__header">Information</div>
 
     <h2 class="project__title">
-      {% if page.link and page.link != "" %}
-      <a href="{{ page.link }}" target="_blank">{{ page.title }}</a>
-      {% else %}
       {{ page.title }}
-      {% endif %}
+      {% if page.link and page.link != "" %}<a title="{{ page.title }}" href="{{ page.link }}" target="_blank"><span>Visit website</span></a>{% endif %}
     </h2>
 
     {% if page.x and page.x != empty %}<div class="project__x">{{ page.x }}</div>{% endif %}
