@@ -29,6 +29,14 @@
         margin-right: 0.25em;
         transform: rotate(45deg);
       }
+
+      &:hover {
+        color: inherit;
+
+        span {
+          color: blue;
+        }
+      }
     }
   }
 
