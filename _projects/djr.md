@@ -2,7 +2,7 @@
 title: "Portfolio website"
 x:
 details: "Web concept, web design, web development"
-link: "https://davidjamesroberts.com/dev"
+link:
 
 order: 3
 
