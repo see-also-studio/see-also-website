@@ -1,7 +1,7 @@
 {%- if page.layout == "home" -%}
 {{ site.title }}{% if site.tagline %} {{ site.seperator | default: "—" }} {{ site.tagline }}{% endif %}
 {%- elsif page.collection == 'projects' -%}
-{{ site.title }} {{ site.seperator | default: "—" }} Work
+Sample Work {{ site.seperator | default: "—" }} {{ site.title }} Studio
 {%- else -%}
-{{ site.title }} {{ site.seperator | default: "—" }} {{ page.title }}
+{{ page.title }} {{ site.seperator | default: "—" }} {{ site.title }} Studio
 {%- endif -%}
