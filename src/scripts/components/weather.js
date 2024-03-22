@@ -13,7 +13,7 @@ export class CurrentWeather {
     const url = 'https://api.openweathermap.org/data/2.5/weather?id=2643741&units=metric&appid=' + key;
     fetch(url)
     .then(data => data.json())
-    .then(data => this.el.innerText = `${data['weather'][0]['description']} in the city, ${Math.round(data['main']['temp'])}°`)
+    .then(data => this.el.innerText = `${Math.round(data['main']['temp'])}°, ${data['weather'][0]['description']} in the city`)
     .catch(() => console.log('current weather api request failed.'));
   }
 }
