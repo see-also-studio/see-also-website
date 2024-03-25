@@ -27,6 +27,7 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  text-underline-offset: 0.15em;
 
   &:hover {
     color: var(--color--secondary);
