@@ -52,6 +52,7 @@
     text-transform: uppercase;
     transition-duration: 200ms;
     transition-property: background-color;
+    color: var(--color--foreground);
 
     &:hover {
       background: #AAA7A2;
