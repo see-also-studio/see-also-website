@@ -65,8 +65,8 @@ body[data-view="project"] {
       min-height: 16em;
 
       @include mq.mq($until: small) {
-        margin-left: -38vw;
-        width: calc(38vw + 100%);
+        margin-left: calc(var(--mobile-margin) * -1);
+        width: calc(var(--mobile-margin) + 100%);
       }
     }
 
