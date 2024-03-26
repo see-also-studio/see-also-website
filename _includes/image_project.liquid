@@ -14,6 +14,9 @@
 
 {%- if fileExt == ".jpg" or fileExt == ".jpeg" or fileExt == ".png" or fileExt == ".gif"  -%}
 <img alt="{{ include.content.alt }}"
+  {% if include.content.title & include.content.title != "" %}
+  title="{{ include.content.title }}"
+  {% endif %}
   {%- assign setWidth = 640 -%}
   {% if include.content.width and include.content.width != "" and include.content.width > setWidth %}
   sizes = "(max-width: 659px) 60vw, 40vw"
