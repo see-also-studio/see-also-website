@@ -114,12 +114,6 @@ section {
   }
 }
 
-.content {
-  & > * + * {
-    margin-top: 1em;
-  }
-}
-
 section#about {
   @include mq.mq($until: small) {
     grid-row: 1 / 2;
@@ -134,10 +128,6 @@ section#about {
   .section__content {
     padding-top: var(--gap-vertical);
     padding-bottom: calc(var(--line-height) * 2em);
-
-    > p + p {
-      margin-top: 1em;
-    }
   }
 }
 

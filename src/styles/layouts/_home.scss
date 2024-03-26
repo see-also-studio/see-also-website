@@ -2,4 +2,18 @@
   a[href^="mailto:"] {
     text-decoration: underline 0.07em;
   }
+
+  .section__content {
+    > * + * {
+      margin-top: 1em;
+    }
+  }
+}
+
+.details {
+  &__content {
+    > * + * {
+      margin-top: 1em;
+    }
+  }
 }
