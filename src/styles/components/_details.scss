@@ -1,0 +1,29 @@
+details {
+  &.details--oneway {
+    summary {
+      cursor: pointer;
+
+      &::before {
+        content: "More";
+      }
+
+      &:hover {
+        color: var(--color--secondary);
+      }
+
+      &::marker {
+        content: "";
+      }
+    }
+
+    &[open] {
+      summary {
+        display: none;
+      }
+    }
+  }
+}
+
+* + details.details--oneway {
+  margin-top: 1em;
+}

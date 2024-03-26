@@ -4,6 +4,7 @@ import Swiper from 'swiper';
 import { Navigation, Pagination, EffectFade, Keyboard, Mousewheel, A11y } from 'swiper/modules';
 import { CustomBlockTime } from './components/time.js';
 import { CurrentWeather } from './components/weather.js';
+import { details } from './components/details.js';
 
 Swiper.use([Navigation, Pagination, EffectFade, Keyboard, Mousewheel, A11y]);
 
@@ -353,3 +354,7 @@ function openSection(el) {
     },
   });
 }
+
+document.querySelectorAll('details').forEach(function(el) {
+  details(el);
+});
