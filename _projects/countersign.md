@@ -1,7 +1,7 @@
 ---
 title: "Podcast branding & website"
 x:
-details: "Web concept, design, web development, branding, creative direction"
+details: "Creative direction, branding, web concept, web design, web development"
 link: "https://countersignisapodcast.com/"
 
 order: 2

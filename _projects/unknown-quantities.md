@@ -1,7 +1,7 @@
 ---
 title: "Publication web-archive & education workshops"
 x: "See, Also × Central Saint Martins (MA Graphic Communication Design)"
-details: "Web design, web development, digital workshops, teaching"
+details: "Digital workshops, web design, web development, teaching"
 link: "https://uqjournal.net/"
 
 order: 1

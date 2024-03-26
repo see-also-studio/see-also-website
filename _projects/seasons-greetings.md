@@ -1,7 +1,7 @@
 ---
-title: "Seasonal greetings from See, Also"
+title: "Seasonal greetings from See,&nbsp;Also"
 x:
-details: "Web concept, web design, web development, creative direction"
+details: "Creative direction, web concept, web design, web development"
 link:
 
 order: 1

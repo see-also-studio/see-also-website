@@ -1,7 +1,7 @@
 ---
 title: "Academic research website & graphic design"
 x:
-details: "Web concept, design, web development, branding, editorial design"
+details: "Editorial design, web concept, design, web development, branding"
 link: "https://www.colouring-in.com/"
 
 order: 1
