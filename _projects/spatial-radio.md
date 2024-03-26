@@ -1,5 +1,5 @@
 ---
-title: "Radio website"
+title: "Spatial Radio (radio broadcast)"
 x: "See, Also × Central Saint Martins (Spatial Practices)"
 details: "Web design, web development"
 link: "https://spatialradio.live/"

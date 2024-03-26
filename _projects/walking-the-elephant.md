@@ -1,5 +1,5 @@
 ---
-title: "Community project website"
+title: "Walking the Elephant (community project)"
 x: "See, Also × Latin Elephant"
 details: "Web concept, web design, web development"
 link: "https://latinelephant.org/walkingtheelephant/"

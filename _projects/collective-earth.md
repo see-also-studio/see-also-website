@@ -1,5 +1,5 @@
 ---
-title: "Art-installation project website"
+title: "Collective Earth Stories (art installation)"
 x:
 details: "Web concept, web design, web development"
 link: "https://collective-earth.world/"

@@ -1,5 +1,5 @@
 ---
-title: "Academic research website"
+title: "NITE (academic research)"
 x: "See, Also × UCL"
 details: "Web concept, web design, web development"
 link:

@@ -1,10 +1,10 @@
 ---
-title: "Portfolio website"
+title: "David James Roberts (portfolio)"
 x:
 details: "Web concept, web design, web development"
 link:
 
-order: 3
+order: 0
 
 color: 
   - "#000000"

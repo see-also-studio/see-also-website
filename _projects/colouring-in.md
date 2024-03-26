@@ -1,5 +1,5 @@
 ---
-title: "Academic research website & graphic design"
+title: "Colouring In (publishing)"
 x:
 details: "Editorial design, web concept, design, web development, branding"
 link: "https://www.colouring-in.com/"

@@ -1,5 +1,5 @@
 ---
-title: "Portfolio website"
+title: "OFA (portfolio)"
 x:
 details: "Web concept, web design"
 link:

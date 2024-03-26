@@ -1,5 +1,5 @@
 ---
-title: "Seasonal greetings from See,&nbsp;Also"
+title: "Season's greetings"
 x:
 details: "Creative direction, web concept, web design, web development"
 link:

@@ -1,5 +1,5 @@
 ---
-title: "Portfolio website"
+title: "Aisling M O'Carroll (portfolio)"
 x:
 details: "Web concept, web design, web development, branding"
 link: "https://amocarroll.com/"

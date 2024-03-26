@@ -1,5 +1,5 @@
 ---
-title: "Poem generator"
+title: "Sweet Nothings (poem generator)"
 x:
 details: "Web concept, web design, web development"
 link: "https://sweetnothings.site/"
