@@ -168,6 +168,7 @@ barba.init({
         if (data.current.url.path === data.next.url.path) {
           const aboutSection = document.body.querySelector('#about .section__content-wrapper');
           if (aboutSection.style.display === 'none') {
+            closeAllDetails();
             openSection(aboutSection);
           } else {
             closeSection(aboutSection);
@@ -197,6 +198,7 @@ barba.init({
           return;
         }
 
+        closeAllDetails();
         const projectContent = document.body.querySelector('#projects .project__content');
         const projectContentWrapper = document.body.querySelector('#content .section__content-wrapper');
         const projectContentWrapperInner = projectContentWrapper.querySelector('.section__content');
@@ -321,6 +323,13 @@ barba.init({
     },
   ],
 });
+
+function closeAllDetails() {
+  document.querySelectorAll('details').forEach(function(el) {
+    console.log('close details');
+    el.open = false;
+  });
+}
 
 function closeSection(el) {
   const currentHeight = el.offsetHeight;
