@@ -9,6 +9,13 @@ export function details(el, settings = {}) {
 
   summary.addEventListener('click', (evt) => onClick(evt));
 
+  if (el.classList.contains('details--moreless')) {
+    const lessButton = document.createElement('button');
+    lessButton.setAttribute('title', 'Less');
+    lessButton.addEventListener('click', (evt) => onClick(evt));
+    content.appendChild(lessButton);
+  }
+
   function onClick(evt) {
     evt.preventDefault();
     details.style.overflow = 'hidden';

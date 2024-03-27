@@ -7,7 +7,7 @@ Founded by [Lucy Maria](http://lucymaria.co.uk/){:target="_blank" rel="noopener"
 
 For new collaborations and commissions, please [email us](mailto:studio@see-also.com){:target="_blank" rel="noopener"}.
 
-<details class="details details--oneway" markdown="1"><summary></summary><div class="details__content" markdown="1">
+<details class="details details--moreless" markdown="1"><summary></summary><div class="details__content" markdown="1">
 
 Initially meeting during a Graphic Design MA at Central Saint Martins and bonding over,… lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
