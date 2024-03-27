@@ -1,7 +1,7 @@
 ---
 title: "Colouring In (publishing)"
 x:
-details: "Editorial design, web concept, design, web development, branding"
+details: "Editorial design, web concept, web design, web development, branding"
 link: "https://www.colouring-in.com/"
 
 order: 1
