@@ -3,10 +3,18 @@
     min-height: calc(1em * var(--line-height));
 
     summary {
+      width: fit-content;
       cursor: pointer;
 
       &::before {
         content: "Read more";
+      }
+
+      &::after {
+        content: "↑";
+        transform: translateY(0.06em) rotate(90deg);
+        display: inline-block;
+        margin-left: 0.32em;
       }
 
       &:hover {
@@ -36,6 +44,13 @@
       content: "Less";
     }
 
+    &::after {
+      content: "↑";
+      transform: translateY(0.06em);
+      display: inline-block;
+      margin-left: 0.32em;
+    }
+
     &:hover {
       color: var(--color--secondary);
     }
@@ -43,9 +58,7 @@
 
   summary, 
   button[title="Less"] {
-    text-decoration-line: underline;
-    text-underline-offset: 0.2em;
-    text-decoration-thickness: 0.07em;
+    font-size: 84%;
   }
 }
 
