@@ -16,4 +16,16 @@ media:
 #     height: 800
 #     width: 600
 #     alt: ""
+  -
+    href: "projects/amoc/amoc-screensaver.webm"
+    width: 1280
+    height: 800
+  -
+    href: "projects/amoc/amoc-screensaver-still.png"
+    width: 1280
+    height: 800
+  -
+    href: "projects/amoc/amoc-still.png"
+    width: 1280
+    height: 800
 ---
