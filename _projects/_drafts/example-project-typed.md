@@ -43,6 +43,10 @@ media:
 #
 #     @string (optional)
 #     backgroundColor: ""
+#
+#     @bool (optional)
+#     rounded: false
+#
   -
     href: "projects/test-project/Mercury_in_color_-_Prockter07-edit1.jpg"
     height: 1950

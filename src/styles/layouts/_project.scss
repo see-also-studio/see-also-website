@@ -87,3 +87,14 @@ body[data-view="project"] {
     display: none;
   }
 }
+
+/**
+Rounded corners on images
+*/
+
+img,
+video {
+  &.rounded {
+    filter: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='blur' color-interpolation-filters='sRGB'%3E%3CfeGaussianBlur in='SourceGraphic' stdDeviation='5' result='blur'/%3E%3CfeColorMatrix in='blur' mode='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 100 -50' result='mask'%3E%3C/feColorMatrix%3E%3CfeComposite in='SourceGraphic' in2='mask' operator='atop'%3E%3C/feComposite%3E%3C/filter%3E%3C/svg%3E#blur");
+  }
+}

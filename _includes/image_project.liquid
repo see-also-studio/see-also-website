@@ -13,7 +13,9 @@
 {%- endif -%}
 
 {%- if fileExt == ".jpg" or fileExt == ".jpeg" or fileExt == ".png" or fileExt == ".gif"  -%}
-<img alt="{{ include.content.alt }}"
+<img 
+  {% if include.content.rounded == false -%}{%- else -%}class="rounded"{%- endif %}
+  alt="{{ include.content.alt }}"
   {% if include.content.title & include.content.title != "" %}
   title="{{ include.content.title }}"
   {% endif %}
@@ -50,6 +52,7 @@
 >
 {%- elsif fileExt == ".webm" -%}
 <video
+  {% if include.content.rounded == false -%}{%- else -%}class="rounded"{%- endif %}
   alt="include.content.alt"
   {% if include.content.width & include.content.width != "" & include.content.height & include.content.height != "" %}
   width="{{ include.content.width }}"
