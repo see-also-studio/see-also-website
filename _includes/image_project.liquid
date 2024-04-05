@@ -48,9 +48,8 @@
   style="{{ imageStyles }}"
   {% endif %}
 >
-{%- elsif fileExt = ".mp4" -%}
-<video src="/assets/{{ include.content.href }}"
-  type="video/mp4"
+{%- elsif fileExt == ".webm" -%}
+<video
   alt="include.content.alt"
   {% if include.content.width & include.content.width != "" & include.content.height & include.content.height != "" %}
   width="{{ include.content.width }}"
@@ -60,6 +59,19 @@
   title="{{ include.content.title }}"
   {% endif %}
   autoplay loop muted preload>
+  <source
+    src="/assets/{{ include.content.href }}"
+    {%- if include.content.dislableResize -%}{%- else -%}
+    media="all and (min-device-width:700px"
+    {%- endif -%}
+    type="video/webm"
+  />
+  {%- if include.content.dislableResize -%}{%- else -%}
+  <source
+    src="/assets/{{ fileName }}-s{{ fileExt }}"
+    type="video/webm"
+  />
+  {%- endif -%}
 </video>
 {%- endif -%}
 {%- endif -%}
