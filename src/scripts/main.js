@@ -52,9 +52,6 @@ function initGallery() {
         el: '.gallery__pagination',
         type: 'custom',
         renderCustom: function(swiper, current, total) {
-          if (total <= 3) {
-            return '';
-          }
           return `${ Math.min(Math.max(current - 1, 1), total - 2) }/${ total - 2 }`;
         },
       },
