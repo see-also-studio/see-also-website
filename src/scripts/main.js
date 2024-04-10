@@ -367,3 +367,13 @@ function openSection(el) {
 document.querySelectorAll('details').forEach(function(el) {
   details(el);
 });
+
+fetch('/assets/rounded-corners-filter.svg')
+  .then(data => data.text())
+  .then(svg => {
+    const div = document.createElement('div');
+    div.innerHTML = svg;
+    div.style.visibility = 'hidden';
+    document.body.appendChild(div);
+  }
+);
