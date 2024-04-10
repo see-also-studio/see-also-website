@@ -13,11 +13,7 @@
       <li class="gallery__item swiper-slide"><!-- blank previous project navigation slide --></li>
       {% if page.media %}
         {% for media in page.media %}
-        <li class="gallery__item swiper-slide"
-          {%- if media.padding & media.padding != "" -%}
-          style="padding:{{ media.padding }};"
-          {%- endif -%}
-        >
+        <li class="gallery__item swiper-slide">
           {% include image_project.liquid content=media %}
         </li>
         {% endfor %}
