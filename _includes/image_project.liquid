@@ -61,7 +61,7 @@
   {% if include.content.title & include.content.title != "" %}
   title="{{ include.content.title }}"
   {% endif %}
-  autoplay loop muted preload>
+  autoplay loop muted preload playsinline>
   <source
     src="/assets/{{ include.content.href }}"
     {%- if include.content.dislableResize -%}{%- else -%}
@@ -73,6 +73,12 @@
   <source
     src="/assets/{{ fileName }}-s{{ fileExt }}"
     type="video/webm"
+  />
+  {%- endif -%}\
+  {%- if include.content.disableMp4 -%}{%- else -%}
+  <source
+    src="/assets/{{ fileName }}.mp4"
+    type="video/mp4"
   />
   {%- endif -%}
 </video>
