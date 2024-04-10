@@ -104,6 +104,7 @@ function initGallery() {
 
     if (init) {
       init = false;
+      document.body.querySelector('#projects h2.section__title a').setAttribute('href', window.location.pathname);
 
       if (galleryNavigated === 'end') {
         swiper.slideTo(swiper.slides.length - 1, 0, false);
