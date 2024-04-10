@@ -45,7 +45,7 @@ media:
 #     backgroundColor: ""
 #
 #     @bool (optional)
-#     rounded: false
+#     rounded: true
 #
   -
     href: "projects/test-project/Mercury_in_color_-_Prockter07-edit1.jpg"

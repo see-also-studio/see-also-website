@@ -20,5 +20,5 @@ media:
 #     alt: ""
 #     title: ""
 #     backgroundColor: ""
-#     rounded: false
+#     rounded: true
 ---
