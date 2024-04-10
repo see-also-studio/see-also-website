@@ -16,4 +16,9 @@ media:
 #     height: 800
 #     width: 600
 #     alt: ""
+  -
+    href: "projects/collective-earth/collective-earth-mobile.png"
+    width: 2450
+    height: 1220
+    rounded: true
 ---

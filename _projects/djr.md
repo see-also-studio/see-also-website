@@ -27,5 +27,4 @@ media:
     width: 2541
     height: 2016
     padding: "0 1.5em"
-    rounded: false
 ---

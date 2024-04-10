@@ -22,7 +22,6 @@ media:
     href: "projects/countersign/countersign1.png"
     height: 1827
     width: 2976
-    rounded: false
   -
     href: "projects/countersign/countersign2.png"
     height: 1623
@@ -31,11 +30,11 @@ media:
     href: "projects/countersign/countersign3.png"
     height: 1566
     width: 3021
+    rounded: true
   -
     href: "projects/countersign/countersign4.png"
     height: 1182
     width: 2889
-    rounded: false
   -
     href: "projects/countersign/countersign5.png"
     height: 1845
