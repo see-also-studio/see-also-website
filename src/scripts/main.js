@@ -174,9 +174,17 @@ barba.init({
             onComplete: () => data.next.container.querySelector('.gallery').classList.add('active'),
           });
         } else {
+          if (data.next.namespace === 'project') {
+            data.next.container.querySelector('.gallery').classList.remove('active');
+          }
           gsap.from(data.next.container, {
             opacity: 0,
             duration: transitionDuration,
+            onComplete: () => {
+              if (data.next.namespace === 'project') {
+                data.next.container.querySelector('.gallery').classList.add('active');
+              }
+            },
           });
         }
       },
