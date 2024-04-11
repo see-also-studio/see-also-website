@@ -11,6 +11,12 @@
     }
   }
 
+  &.empty {
+    .gallery__pagination {
+      display: none;
+    }
+  }
+
   &:not(.empty) {
     background-color: black;
   }
