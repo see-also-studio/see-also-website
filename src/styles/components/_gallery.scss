@@ -3,6 +3,13 @@
 .gallery {
   margin-top: 2em;
   color: white;
+  background-color: var(--color--background);
+
+  &:not(.active) {
+    .gallery__item {
+      transition-property: none;
+    }
+  }
 
   &:not(.empty) {
     background-color: black;

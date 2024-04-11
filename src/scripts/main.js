@@ -142,19 +142,43 @@ barba.init({
       },
       leave(data) {
         console.log('default-transition leave');
-        gsap.to(data.current.container, {
-          opacity: 0,
-          duration: transitionDuration,
-        });
+        console.log(data.current.namespace);
+        if (data.current.namespace === 'project' && data.next.namespace === 'project') {
+          data.current.container.style.pointerEvents = 'none';
+          data.current.container.querySelector('.gallery').style.zIndex = '-1';
+          data.current.container.querySelector('.gallery__pagination').style.display = 'none';
+          data.current.container.querySelectorAll('.gallery__button').forEach(function(el) {
+            el.style.display = 'none';
+          });
+          console.log('yep');
+          return gsap.to(data.current.container.querySelector('.gallery__wrapper'), {
+            opacity: 0,
+            duration: transitionDuration,
+          });
+        } else {
+          gsap.to(data.current.container, {
+            opacity: 0,
+            duration: transitionDuration,
+          });
+        }
       },
       enter(data) {
         console.log('default-transition enter');
         document.body.setAttribute('data-view', data.next.namespace);
         viewUpdate();
-        gsap.from(data.next.container, {
-          opacity: 0,
-          duration: transitionDuration,
-        });
+        if (data.current.namespace === 'project' && data.next.namespace === 'project') {
+          data.next.container.querySelector('.gallery').classList.remove('active');
+          return gsap.from(data.next.container.querySelector('.gallery__wrapper'), {
+            opacity: 0,
+            duration: transitionDuration,
+            onComplete: () => data.next.container.querySelector('.gallery').classList.add('active'),
+          });
+        } else {
+          gsap.from(data.next.container, {
+            opacity: 0,
+            duration: transitionDuration,
+          });
+        }
       },
     },
   ], 

@@ -5,7 +5,7 @@
 {%- if page.textColor & page.textColor != "" -%}
 {%- assign galleryStyles = galleryStyles | append: "color:" | append: page.textColor | append: ";" -%}
 {%- endif -%}
-<div class="project__gallery gallery{%- if page.media & page.media != "" & page.media != nil -%}{% else %} empty{%- endif -%}"
+<div class="project__gallery gallery active{%- if page.media & page.media != "" & page.media != nil -%}{% else %} empty{%- endif -%}"
   {% if galleryStyles != "" %}style="{{ galleryStyles }}"{% endif %}
 >
   <div class="gallery__inner">
