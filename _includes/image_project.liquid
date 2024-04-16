@@ -61,7 +61,7 @@
   {% if include.content.title & include.content.title != "" %}
   title="{{ include.content.title }}"
   {% endif %}
-  autoplay loop muted preload playsinline>
+  autoplay loop muted preload playsinline disablePictureInPicture>
   <source
     src="/assets/{{ include.content.href }}"
     {%- if include.content.dislableResize -%}{%- else -%}
