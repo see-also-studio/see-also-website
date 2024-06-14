@@ -7,7 +7,7 @@ link:
 order: 0
 
 color: 
-  - "#000000"
+  - "#9D2ED8"
 
 backgroundColor: "black"
 

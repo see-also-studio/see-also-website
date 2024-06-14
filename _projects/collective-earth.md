@@ -7,7 +7,7 @@ link: "https://collective-earth.world/"
 order: 1
 
 color: 
-  - "#000000"
+  - "#5A290B"
 
 media: 
 # Each entry must list file name, height and width, alt text (optional)

@@ -6,9 +6,6 @@ link:
 
 order: 1
 
-color: 
-  - "#000000"
-
 media: 
 # Each entry must list file name, height and width, alt text (optional)
 #   -

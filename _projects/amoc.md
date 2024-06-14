@@ -7,7 +7,8 @@ link: "https://amocarroll.com/"
 order: 1
 
 color: 
-  - "#000000"
+  - "#cfcdc9"
+  - "#726326"
 
 media: 
 # Each entry must list file name, height and width, alt text (optional)

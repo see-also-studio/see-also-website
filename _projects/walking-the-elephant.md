@@ -7,7 +7,7 @@ link: "https://latinelephant.org/walkingtheelephant/"
 order: 1
 
 color: 
-  - "#000000"
+  - "#f6c740"
 
 media: 
 # Each entry must list file name, height and width, alt text (optional)

@@ -7,7 +7,7 @@ link: "https://graphicallyspeaking.co.uk/"
 order: 1
 
 color: 
-  - "#000000"
+  - "#ff0000"
 
 media: 
 # Each entry must list file name, height and width, alt text (optional)

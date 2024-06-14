@@ -7,7 +7,7 @@ link: "https://spatialradio.live/"
 order: 1
 
 color: 
-  - "#000000"
+  - "#eaefe8"
 
 media: 
 # Each entry must list file name, height and width, alt text (optional)

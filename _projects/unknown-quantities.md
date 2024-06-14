@@ -7,7 +7,7 @@ link: "https://uqjournal.net/"
 order: 1
 
 color: 
-  - "#000000"
+  - "#ebe2d1"
 
 media: 
 # Each entry must list file name, height and width, alt text (optional)

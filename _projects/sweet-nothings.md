@@ -7,7 +7,7 @@ link: "https://sweetnothings.site/"
 order: 1
 
 color: 
-  - "#000000"
+  - "#ff0033"
 
 media: 
 # Each entry must list file name, height and width, alt text (optional)

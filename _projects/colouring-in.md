@@ -7,7 +7,7 @@ link: "https://www.colouring-in.com/"
 order: 1
 
 color: 
-  - "#000000"
+  - "#ffffff"
 
 media: 
 # Each entry must list file name, height and width, alt text (optional)

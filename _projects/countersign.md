@@ -7,7 +7,7 @@ link: "https://countersignisapodcast.com/"
 order: 0
 
 color: 
-  - "#000000"
+  - "#012f79"
 
 backgroundColor: "black"
 
