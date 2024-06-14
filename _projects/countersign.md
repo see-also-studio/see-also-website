@@ -28,8 +28,8 @@ media:
     width: 2859
   -
     href: "projects/countersign/countersign3.png"
-    height: 1566
-    width: 3021
+    height: 1285
+    width: 2450
     rounded: true
   -
     href: "projects/countersign/countersign-assets.webm"
