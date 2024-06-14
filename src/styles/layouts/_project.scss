@@ -126,7 +126,7 @@ Orbs
 }
 
 .section__content[data-barba-namespace="project"] {
-  &[style] {
+  &[style="pointer-events: none;"] {
     .project-orb {
       opacity: 0;
     }
