@@ -24,8 +24,8 @@ media:
     width: 700
   -
     href: "projects/countersign/countersign2.png"
-    height: 1623
-    width: 2859
+    height: 1718
+    width: 3024 
   -
     href: "projects/countersign/countersign3.png"
     height: 1285
