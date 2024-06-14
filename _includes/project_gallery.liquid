@@ -26,4 +26,10 @@
     <button class="gallery__button gallery__button--next" title="Next image in gallery"></button>
     <div class="gallery__pagination"></div>
   </div>
+  {%- if page.color & page.color != "" -%}
+  <div 
+    class="project-orb"
+    style="background: {%  if page.color.size > 1 | %}linear-gradient(180deg, {{ page.color | array_to_sentence_string: "," }}){% else %}{{ page.color }}{% endif %}"
+  ></div>
+  {%- endif -%}
 </div>

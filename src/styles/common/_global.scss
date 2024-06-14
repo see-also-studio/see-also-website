@@ -53,6 +53,8 @@ main {
   transition-property: grid-template-rows;
   transition-duration: 200ms;
 
+  overflow: hidden;
+
   @include mq.mq($until: small) {
     grid-template-rows: 0fr 0fr auto 0fr 0fr;
     grid-template-columns: 100%;

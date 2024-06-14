@@ -5,6 +5,7 @@ import { Navigation, Pagination, EffectFade, Keyboard, Mousewheel, A11y } from '
 import { CustomBlockTime } from './components/time.js';
 import { CurrentWeather } from './components/weather.js';
 import { details } from './components/details.js';
+import { orbPosition } from './components/orb.js';
 
 Swiper.use([Navigation, Pagination, EffectFade, Keyboard, Mousewheel, A11y]);
 
@@ -34,6 +35,12 @@ function initGallery() {
   const galleryNavigated = document.body.getAttribute('data-navigated');
   console.log(galleryNavigated ? 'Slide in from: ' + galleryNavigated : 'Navigated straight to page');
   galleries.forEach(function(el) {
+
+    const orb = el.querySelector('.project-orb');
+    if (orb) {
+      orbPosition(orb);
+    }
+
     let init = true;
     let navigatable = false;
     const swiper = new Swiper(el.querySelector('.gallery__inner'), {
