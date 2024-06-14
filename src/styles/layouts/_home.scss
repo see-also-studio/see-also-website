@@ -1,9 +1,9 @@
 #about {
-  a[href^="mailto:"] {
-    text-decoration-line: underline;
-  }
-
   .section__content {
+    a {
+      text-decoration-line: underline;
+    }
+
     > * + * {
       margin-top: 1em;
     }
