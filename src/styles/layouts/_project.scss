@@ -113,8 +113,6 @@ Orbs
   top: var(--top);
   left: var(--left);
   z-index: 10;
-  transition-duration: 400ms;
-  transition-property: opacity;
   animation-name: fadein;
   animation-duration: 400ms;
   animation-iteration-count: 1;
@@ -128,6 +126,8 @@ Orbs
 .section__content[data-barba-namespace="project"] {
   &[style="pointer-events: none;"] {
     .project-orb {
+      transition-duration: 400ms;
+      transition-property: opacity;
       opacity: 0;
     }
   }
