@@ -2,11 +2,6 @@
 
 #projects {
   .section__title {
-    &:hover {
-      filter: invert(1);
-      mix-blend-mode: difference;
-    }
-
     &::before {
       content: "(";
     }
