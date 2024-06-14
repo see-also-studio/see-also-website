@@ -7,14 +7,7 @@
       cursor: pointer;
 
       &::before {
-        content: "Read more";
-      }
-
-      &::after {
-        content: "↑";
-        transform: translateY(0.06em) rotate(90deg);
-        display: inline-block;
-        margin-left: 0.32em;
+        content: "(Read more)";
       }
 
       &:hover {
@@ -41,14 +34,7 @@
     cursor: pointer;
 
     &::before {
-      content: "Less";
-    }
-
-    &::after {
-      content: "↑";
-      transform: translateY(0.06em);
-      display: inline-block;
-      margin-left: 0.32em;
+      content: "(Less)";
     }
 
     &:hover {
