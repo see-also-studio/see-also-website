@@ -113,4 +113,22 @@ Orbs
   top: var(--top);
   left: var(--left);
   z-index: 10;
+  transition-duration: 400ms;
+  transition-property: opacity;
+  animation-name: fadein;
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+}
+
+.section__content[data-barba-namespace="project"] {
+  &[style] {
+    .project-orb {
+      opacity: 0;
+    }
+  }
 }
