@@ -16,4 +16,8 @@ media:
 #     height: 800
 #     width: 600
 #     alt: ""
+  -
+    href: "projects/walking-the-elephant/walking-the-elephant.webm"
+    width: 1280
+    height: 800
 ---
