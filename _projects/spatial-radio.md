@@ -16,4 +16,8 @@ media:
 #     height: 800
 #     width: 600
 #     alt: ""
+  -
+    href: "projects/spatial-radio/spatial-radio1.png"
+    width: 3024
+    height: 1718
 ---
