@@ -44,7 +44,7 @@ function initGallery() {
     let init = true;
     let navigatable = false;
     const swiper = new Swiper(el.querySelector('.gallery__inner'), {
-      grabCursor: true,
+      grabCursor: false,
       autoHeight: false,
       effect: 'fade',
       fadeEffect: {
