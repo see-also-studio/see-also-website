@@ -11,7 +11,7 @@ For new collaborations and commissions, please [email us](mailto:studio@see-also
 
 Initially meeting during a Graphic Design MA at Central Saint Martins and bonding over,… lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-Frustrated by the lack of projects that weren’t really integrated with ideas of digital design and creativity, we first set on creating playful digital experiments … lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Frustrated by the lack of projects that disregarded ideas of digital design and creativity, we first set on creating playful digital experiments … lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 What we are most excited by–and what we set out to create–is creative design that aids (and is created around) communication of a message, work, project; rather than generic design that’s merely a container for the information (no generic template-led websites here). 
 

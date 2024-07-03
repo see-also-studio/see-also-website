@@ -1,7 +1,7 @@
 ---
 title: "Collective Earth Stories (art installation)"
 x:
-details: "Web concept, web design, web development"
+details: "Web concept, web design, web development, visual identity"
 link: "https://collective-earth.world/"
 
 order: 1

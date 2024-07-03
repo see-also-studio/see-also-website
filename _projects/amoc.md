@@ -1,7 +1,7 @@
 ---
 title: "Aisling M O'Carroll (portfolio)"
 x:
-details: "Web concept, web design, web development, branding"
+details: "Web concept, web design, web development, visual identity"
 link: "https://amocarroll.com/"
 
 order: 1
