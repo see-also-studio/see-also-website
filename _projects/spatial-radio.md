@@ -17,7 +17,15 @@ media:
 #     width: 600
 #     alt: ""
   -
-    href: "projects/spatial-radio/spatial-radio1.png"
-    width: 3024
-    height: 1718
+    href: "projects/spatial-radio/spatial-radio-1.png"
+    width: 2560
+    height: 1600
+  -
+    href: "projects/spatial-radio/spatial-radio.webm"
+    width: 1280
+    height: 800
+  -
+    href: "projects/spatial-radio/spatial-radio-2.png"
+    width: 2560
+    height: 1600
 ---
