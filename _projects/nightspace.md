@@ -2,7 +2,7 @@
 title: "NITE (academic research)"
 x: "See, Also × UCL"
 details: "Web concept, web design, web development"
-link:
+link: "https://nightspace.see-also.com/"
 
 order: 1
 
