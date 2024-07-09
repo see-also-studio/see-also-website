@@ -34,7 +34,7 @@
         color: inherit;
 
         span {
-          color: blue;
+          color: var(--color--secondary);
         }
       }
     }
@@ -109,7 +109,7 @@ Orbs
   aspect-ratio: 1/1.16;
   border-radius: 50%;
   pointer-events: none;
-  filter: blur(0.4em);
+  filter: blur(0.7em);
   transform: translate(-50%, -50%);
   top: var(--top);
   left: var(--left);
