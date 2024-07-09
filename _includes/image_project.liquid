@@ -64,17 +64,17 @@
   autoplay loop muted preload playsinline disablePictureInPicture>
   <source
     src="/assets/{{ include.content.href }}"
-    {%- if include.content.dislableResize -%}{%- else -%}
+    {%- if include.content.disableResize -%}{%- else -%}
     media="all and (min-device-width:700px"
     {%- endif -%}
     type="video/webm"
   />
-  {%- if include.content.dislableResize -%}{%- else -%}
+  {%- if include.content.disableResize -%}{%- else -%}
   <source
     src="/assets/{{ fileName }}-s{{ fileExt }}"
     type="video/webm"
   />
-  {%- endif -%}\
+  {%- endif -%}
   {%- if include.content.disableMp4 -%}{%- else -%}
   <source
     src="/assets/{{ fileName }}.mp4"
