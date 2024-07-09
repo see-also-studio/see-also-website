@@ -1,7 +1,7 @@
 ---
 title: "Sweet Nothings (poem generator)"
 x:
-details: "Web concept, web design, web development, visual identity"
+details: "Web concept, web design, web development"
 link: "https://sweetnothings.site/"
 
 order: 1
