@@ -9,6 +9,8 @@
   --gap-vertical: 0.5em;
 
   --mobile-margin: 31vw;
+
+  --text-transition-duration: 400ms;
   
   @include mq.mq($until: small) {
     --font-size--large: 1.25em;

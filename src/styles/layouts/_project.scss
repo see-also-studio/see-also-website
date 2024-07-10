@@ -20,6 +20,8 @@
         font-size: 66%;
         display: inline-block;
         transform: translateY(-0.12em);
+        transition-property: color;
+        transition-duration: var(--text-transition-duration);
       }
 
       &::before {

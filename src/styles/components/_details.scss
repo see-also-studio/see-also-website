@@ -6,12 +6,24 @@
       width: fit-content;
       cursor: pointer;
 
+      span::before {
+        content: "Read more";
+        transition-property: color;
+        transition-duration: var(--text-transition-duration);
+      }
+
       &::before {
-        content: "(Read more)";
+        content: "(";
+      }
+  
+      &::after {
+        content: ")";
       }
 
       &:hover {
-        color: var(--color--secondary);
+        span {
+          color: var(--color--secondary);
+        }
       }
 
       &::marker {
@@ -33,12 +45,24 @@
   button[title="Less"] {
     cursor: pointer;
 
+    span::before {
+      content: "Less";
+      transition-property: color;
+      transition-duration: var(--text-transition-duration);
+    }
+
     &::before {
-      content: "(Less)";
+      content: "(";
+    }
+
+    &::after {
+      content: ")";
     }
 
     &:hover {
-      color: var(--color--secondary);
+      span {
+        color: var(--color--secondary);
+      }
     }
   }
 

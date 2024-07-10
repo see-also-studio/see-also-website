@@ -69,7 +69,7 @@
   &__button {
     cursor: pointer;
     text-transform: uppercase;
-    transition-duration: 200ms;
+    transition-duration: var(--text-transition-duration);
     transition-property: background-color;
     color: var(--color--foreground);
     z-index: 20;

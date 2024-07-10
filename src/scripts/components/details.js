@@ -12,6 +12,7 @@ export function details(el, settings = {}) {
   if (el.classList.contains('details--moreless')) {
     const lessButton = document.createElement('button');
     lessButton.setAttribute('title', 'Less');
+    lessButton.appendChild(document.createElement('span'));
     lessButton.addEventListener('click', (evt) => onClick(evt));
     content.appendChild(lessButton);
   }
