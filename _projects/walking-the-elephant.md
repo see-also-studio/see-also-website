@@ -20,4 +20,5 @@ media:
     href: "projects/walking-the-elephant/walking-the-elephant.webm"
     width: 1280
     height: 800
+    disableResize: true
 ---
