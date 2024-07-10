@@ -17,7 +17,7 @@ media:
 #     width: 600
 #     alt: ""
   -
-    href: "projects/sweet-nothings/sweet-nothings1.png"
-    width: 3024
-    height: 1714
+    href: "projects/sweet-nothings/sweet-nothings.webm"
+    width: 1280
+    height: 800
 ---
