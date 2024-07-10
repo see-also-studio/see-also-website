@@ -19,6 +19,11 @@ media:
 #     width: 600
 #     alt: ""
   -
+    href: "projects/djr/djr.webm"
+    width: 1280
+    height: 800
+    disableResize: true
+  -
     href: "projects/djr/djr1.png"
     width: 2772
     height: 1646
