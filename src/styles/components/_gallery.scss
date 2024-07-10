@@ -39,12 +39,12 @@
   }
 
   &__pagination {
-    font-size: var(--font-size--large);
+    font-size: 84%;
     pointer-events: none;
     position: absolute;
     z-index: 50;
-    right: 0.45em;
-    bottom: 0.3em;
+    right: 0.7em;
+    bottom: 0.6em;
   }
 
   &__item {
