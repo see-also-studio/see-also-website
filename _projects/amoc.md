@@ -22,11 +22,11 @@ media:
     width: 1280
     height: 800
   -
-    href: "projects/amoc/amoc-screensaver-still.png"
-    width: 1280
-    height: 800
-  -
     href: "projects/amoc/amoc-still.png"
-    width: 1280
-    height: 800
+    width: 2560
+    height: 1600
+  -
+    href: "projects/amoc/amoc-screensaver-still.png"
+    width: 2560
+    height: 1600
 ---
