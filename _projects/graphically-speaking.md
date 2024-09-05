@@ -16,4 +16,13 @@ media:
 #     height: 800
 #     width: 600
 #     alt: ""
+  -
+    href: "projects/graphically-speaking/graphically-speaking-1.webm"
+    width: 1200
+    height: 680
+    disableResize: true
+  -
+    href: "projects/graphically-speaking/graphically-speaking-02.png"
+    width: 3022
+    height: 1715
 ---

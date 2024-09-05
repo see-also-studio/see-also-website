@@ -7,7 +7,7 @@ link: "https://spatialradio.live/"
 order: 1
 
 color: 
-  - "#eaefe8"
+  - "#d6ddd3"
 
 media: 
 # Each entry must list file name, height and width, alt text (optional)
@@ -17,13 +17,15 @@ media:
 #     width: 600
 #     alt: ""
   -
-    href: "projects/spatial-radio/spatial-radio-1.png"
-    width: 2560
-    height: 1600
+    href: "projects/spatial-radio/spatial-radio-1.webm"
+    width: 1200
+    height: 680
+    disableResize: true
   -
     href: "projects/spatial-radio/spatial-radio.webm"
     width: 1280
     height: 800
+    disableResize: true
   -
     href: "projects/spatial-radio/spatial-radio-2.png"
     width: 2560
