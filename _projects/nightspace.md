@@ -13,4 +13,9 @@ media:
 #     height: 800
 #     width: 600
 #     alt: ""
+  -
+    href: "projects/nightspace/nightspace-01.webm"
+    width: 1280
+    height: 800
+    disableResize: true
 ---

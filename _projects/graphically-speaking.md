@@ -17,12 +17,12 @@ media:
 #     width: 600
 #     alt: ""
   -
-    href: "projects/graphically-speaking/graphically-speaking-1.webm"
+    href: "projects/graphically-speaking/graphically-speaking-01.webm"
     width: 1200
     height: 680
     disableResize: true
   -
     href: "projects/graphically-speaking/graphically-speaking-02.png"
-    width: 3022
-    height: 1715
+    width: 2560
+    height: 1600
 ---
