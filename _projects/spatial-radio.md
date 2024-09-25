@@ -26,8 +26,4 @@ media:
     width: 1280
     height: 800
     disableResize: true
-  -
-    href: "projects/spatial-radio/spatial-radio-2.png"
-    width: 2560
-    height: 1600
 ---
