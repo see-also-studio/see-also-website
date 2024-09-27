@@ -29,4 +29,8 @@ media:
     href: "projects/amoc/amoc-screensaver-still.png"
     width: 2560
     height: 1600
+  -
+    href: "projects/amoc/amoc-3.png"
+    width: 2560
+    height: 1600
 ---
