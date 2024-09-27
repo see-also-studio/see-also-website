@@ -24,10 +24,6 @@ media:
     height: 800
     disableResize: true
   -
-    href: "projects/djr/djr1.png"
-    width: 2772
-    height: 1646
-  -
     href: "projects/djr/djr2.png"
     width: 2541
     height: 2016
