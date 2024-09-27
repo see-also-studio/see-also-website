@@ -19,6 +19,11 @@ media:
     height: 800
     disableResize: true
   -
+    href: "projects/nightspace/nightspace-03.webm"
+    width: 1280
+    height: 800
+    disableResize: true
+  -
     href: "projects/nightspace/nightspace-02.png"
     width: 2560
     height: 1156

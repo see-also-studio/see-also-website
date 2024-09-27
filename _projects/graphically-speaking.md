@@ -19,10 +19,14 @@ media:
   -
     href: "projects/graphically-speaking/graphically-speaking-01.webm"
     width: 1200
-    height: 680
+    height: 726
     disableResize: true
   -
     href: "projects/graphically-speaking/graphically-speaking-02.png"
     width: 2560
-    height: 1600
+    height: 1452
+  -
+    href: "projects/graphically-speaking/graphically-speaking-03.png"
+    width: 2560
+    height: 1452
 ---

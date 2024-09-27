@@ -27,12 +27,12 @@ media:
     height: 1718
     width: 3024 
   -
+    href: "projects/countersign/countersign-assets.webm"
+    width: 3000
+    height: 1180
+  -
     href: "projects/countersign/countersign3.png"
     height: 1285
     width: 2450
     rounded: true
-  -
-    href: "projects/countersign/countersign-assets.webm"
-    width: 3000
-    height: 1180
 ---

@@ -23,9 +23,4 @@ media:
     width: 1280
     height: 800
     disableResize: true
-  -
-    href: "projects/djr/djr2.png"
-    width: 2541
-    height: 2016
-    padding: "0 1.5em"
 ---
