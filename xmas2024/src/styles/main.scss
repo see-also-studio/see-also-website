@@ -16,6 +16,7 @@
 
 * {
   touch-action: manipulation;
+  pointer-events: none;
 }
 
 body {
@@ -62,6 +63,7 @@ hr {
   touch-action: none;
   -webkit-user-select: none;
   user-select: none;
+  pointer-events: initial;
 
   @include mq.mq($until: 690px) {
     font-size: 3.6vw;
