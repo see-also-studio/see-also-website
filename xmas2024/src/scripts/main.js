@@ -59,14 +59,14 @@ document.querySelectorAll('.marquee').forEach(function(element) {
 });
 
 const imageFiles = {
-  clem1: '/xmas2024/media/images/01clem.png',
-  clem2: '/xmas2024/media/images/02clem.png',
-  clem3: '/xmas2024/media/images/03clem.png',
-  clem4: '/xmas2024/media/images/04clem.png',
-  clem5: '/xmas2024/media/images/05clem.png',
-  clem6: '/xmas2024/media/images/06clem.png',
-  clem7: '/xmas2024/media/images/07clem.png',
-  clem8: '/xmas2024/media/images/08clem.png',
+  clem1: '/xmas2024/media/images/01clem.webp',
+  clem2: '/xmas2024/media/images/02clem.webp',
+  clem3: '/xmas2024/media/images/03clem.webp',
+  clem4: '/xmas2024/media/images/04clem.webp',
+  clem5: '/xmas2024/media/images/05clem.webp',
+  clem6: '/xmas2024/media/images/06clem.webp',
+  clem7: '/xmas2024/media/images/07clem.webp',
+  clem8: '/xmas2024/media/images/08clem.webp',
 };
 
 const notes = {
