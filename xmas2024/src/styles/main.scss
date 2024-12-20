@@ -23,6 +23,7 @@ body {
   color: var(--color--foreground);
   background-color: var(--color--background);
   touch-action: none;
+  -webkit-user-select: none;
   user-select: none;
   cursor: url('../images/cursor.svg') 64 64, auto;
 }
@@ -58,8 +59,8 @@ hr {
 .message {
   position: relative;
   cursor: grab;
-  // pointer-events: initial;
   touch-action: none;
+  -webkit-user-select: none;
   user-select: none;
 
   @include mq.mq($until: 690px) {
