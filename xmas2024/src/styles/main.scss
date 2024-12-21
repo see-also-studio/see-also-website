@@ -19,6 +19,11 @@
   pointer-events: none;
 }
 
+html {
+  pointer-events: initial;
+  cursor: url('../images/cursor.svg') 64 64, auto;
+}
+
 body {
   font-family: var(--font-family);
   color: var(--color--foreground);
@@ -26,7 +31,6 @@ body {
   touch-action: none;
   -webkit-user-select: none;
   user-select: none;
-  cursor: url('../images/cursor.svg') 64 64, auto;
 }
 
 main {
