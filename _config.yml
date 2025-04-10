@@ -29,6 +29,6 @@ defaults:
     values: 
       layout: "project"
 
-keep_files: ["/dist/", "/xmas2020/", "/xmas2021/"]
+keep_files: ["/dist/", "/xmas2020/", "/xmas2021/", "xmas2022", "xmas2023", "xmas2024"]
 exclude: ["gulpfile.js", "README.md", "package.json", "package-lock.json", "/src/"]
 safe: true

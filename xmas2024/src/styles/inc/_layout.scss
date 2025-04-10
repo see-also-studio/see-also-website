@@ -1,0 +1,121 @@
+@use "mq";
+
+.large-text {
+  //font-size: 6.25em;
+  font-size: 6.62vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  @include mq.mq($until: 690px) {
+    font-size: 7vw;
+  }
+
+  &__title {
+    font-family: Arial, sans-serif;
+    // text-transform: uppercase;
+    font-size: 1.9em;
+    line-height: 0.95;
+  }
+
+  &__from {
+    font-family: "Allan", serif;
+    margin-top: 0.9em;
+
+    @include mq.mq($until: 690px) {
+      font-size: 1.2em;
+    }
+
+    @include mq.mq($from: 691px) {
+      font-size: 0.85em;
+    }
+  }
+}
+
+.message {
+  --color--bg: #D5D5D5;
+
+  font-family: 'ModeSeven';
+
+  z-index: 250;
+
+  transform: rotate(-6deg);
+
+  // font-size: 1.4em;
+  font-size: 1.1em;
+  // width: 17em;
+  width: 20em;
+  overflow: hidden;
+
+  background: 
+    // linear-gradient(135deg, transparent 0.355em, var(--color--bg) 0.355625em) top left, 
+    // linear-gradient(45deg, var(--color--bg) 0.175em, transparent 0.175625em) top left,
+    linear-gradient(135deg, var(--color--bg) 0.175em, transparent 0.175625em) bottom left, 
+    linear-gradient(45deg, transparent 0.355em, var(--color--bg) 0.355625em) bottom left,
+  ;
+  background-repeat: repeat-x;
+  background-size: 0.5em 0.25em;
+  padding: 0.25em 0;
+
+  //top: calc(100% - 7em);
+
+  @include mq.mq($until: 690px) {
+    // bottom: -31.3em;
+    bottom: -29em;
+
+  }
+
+  @include mq.mq($from: 691px) {
+    left: 15%;
+    bottom: -28em;
+  }
+
+  &__inner {
+    background-color: var(--color--bg);
+    padding: 0.3em 0.78em 1em;
+  }
+
+  h2 {
+    font-size: 2.4em;
+    // text-transform: uppercase;
+    text-align: center;
+    line-height: 1.1;
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+  }
+
+  .table {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 0.8em;
+  }
+
+  &__body {
+    max-width: 80%;
+  }
+
+  .datetime,
+  .top-credit {
+    font-size: 1.08em;
+    min-width: max-content;
+  }
+
+  .top-credit {
+    text-align: right;
+  }
+
+  .mid-credit {
+    grid-template-columns: 0.75fr 1fr;
+    font-size: 0.86em;
+    font-size: 0.8em;
+  }
+
+  .bottom-credit, 
+  .end {
+    font-size: 0.87em;
+    text-align: center;
+  }
+}

@@ -1,0 +1,128 @@
+@use "inc/reset";
+
+@use "mq";
+@use "inc/fonts";
+@use "inc/layout";
+@use "inc/objects";
+@use "inc/flicker";
+
+:root {
+  --font-family: 'Terminal Grotesque', sans-serif;
+  --font-family--serif: serif;
+  --font-family--sans: sans-serif;
+  --color--foreground: #ac2219;
+  --color--background: #F0ECEC;
+}
+
+* {
+  touch-action: manipulation;
+  pointer-events: none;
+}
+
+html {
+  pointer-events: initial;
+  cursor: url('../images/cursor.svg') 64 64, auto;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color--foreground);
+  background-color: var(--color--background);
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 100;
+}
+
+hr {
+  border-color: var(--color--foreground);
+  border-style: dashed;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.large-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.message {
+  position: relative;
+  cursor: grab;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: initial;
+
+  @include mq.mq($until: 690px) {
+    font-size: 3.6vw;
+  }
+}
+
+.marquee {
+  font-family: "ModeSeven", monospace;
+
+  // font-size: 0.78em;
+  font-size: 1.1em;
+  // font-size: 1.56em;
+  text-transform: uppercase;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 50;
+
+  padding: 0.05em 0;
+  
+  &--top {
+    top: 0;
+  }
+
+  &--bottom {
+    bottom: 0;
+  }
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+a {
+  color: var(--color--foreground);
+  text-decoration: none;
+}
+
+.click-icon {
+  position: absolute;
+  left: 15vw;
+  top: 65vh;
+  width: 26vw;
+  height: 26vw;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+
+  @include mq.mq($from: 691px) {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+  }
+}
