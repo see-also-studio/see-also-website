@@ -53,7 +53,7 @@
 {%- elsif fileExt == ".webm" -%}
 <video
   {% if include.content.rounded -%}class="rounded"{%- endif %}
-  alt="include.content.alt"
+  alt="{{ include.content.alt }}"
   {% if include.content.width & include.content.width != "" & include.content.height & include.content.height != "" %}
   width="{{ include.content.width }}"
   height="{{ include.content.height }}"
