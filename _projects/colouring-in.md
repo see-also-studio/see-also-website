@@ -16,4 +16,13 @@ media:
 #     height: 800
 #     width: 600
 #     alt: ""
+  -
+    href: "projects/colouring-in/colouring-in-1.webm"
+    width: 1280
+    height: 698
+    disableResize: true
+  -
+    href: "projects/colouring-in/colouring-in-2.png"
+    width: 3016
+    height: 1646
 ---
