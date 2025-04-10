@@ -19,17 +19,13 @@ media:
 #     width: 600
 #     alt: ""
   -
-    href: "projects/countersign/countersign-screensaver.webm"
+    href: "projects/countersign/countersign-animations-1.webm"
     height: 1120
     width: 700
   -
     href: "projects/countersign/countersign2.png"
     height: 1718
     width: 3024 
-  -
-    href: "projects/countersign/countersign-assets.webm"
-    width: 3000
-    height: 1180
   -
     href: "projects/countersign/countersign3.png"
     height: 1285
