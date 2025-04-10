@@ -14,6 +14,7 @@
   &__title {
     a {
       display: inline-block;
+      margin-left: 0.15em;
 
       span {
         text-transform: uppercase;
@@ -22,14 +23,9 @@
         transform: translateY(-0.12em);
         transition-property: color;
         transition-duration: var(--text-transition-duration);
-      }
-
-      &::before {
-        content: "↑";
-        display: inline-block;
-        margin-left: 0.45em;
-        margin-right: 0.25em;
-        transform: rotate(45deg);
+        border: 1px solid black;
+        border-radius: 2em;
+        padding: 0.3em 0.4em;
       }
 
       &:hover {
