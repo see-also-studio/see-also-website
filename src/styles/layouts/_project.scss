@@ -108,7 +108,7 @@ Orbs
   border-radius: 50%;
   pointer-events: none;
   filter: blur(0.7em);
-  transform: translate(-50%, -50%);
+  transform: translate(calc(-50% + (var(--mouse-x) * -0.4px)), calc(-50% + (var(--mouse-y) * -0.4px)));
   top: var(--top);
   left: var(--left);
   z-index: 10;

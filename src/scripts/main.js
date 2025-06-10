@@ -414,3 +414,11 @@ fetch('/assets/rounded-corners-filter.svg')
     document.body.appendChild(div);
   }
 );
+
+window.addEventListener('mousemove', (event) => {
+  const xPercent = Math.min(Math.max(Math.round((event.clientX / window.innerWidth) * 100), 0), 100);
+  const yPercent = Math.min(Math.max(Math.round((event.clientY / window.innerHeight) * 100), 0), 100);
+
+  document.documentElement.style.setProperty('--mouse-x', `${ xPercent }`);
+  document.documentElement.style.setProperty('--mouse-y', `${ yPercent }`);
+});
