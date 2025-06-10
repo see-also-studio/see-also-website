@@ -26,10 +26,4 @@ media:
     width: 1280
     height: 800
     disableResize: true
-  -
-    href: "projects/unknown-quantities/unknown-quantities-3.webm"
-    width: 1280
-    height: 800
-    disableResize: true
-    padding: "0"
 ---
