@@ -4,7 +4,7 @@ x: "See, Also × Central Saint Martins (Spatial Practices)"
 details: "Web concept, web design, web development"
 link: "https://spatialradio.live/"
 
-order: 1
+order: 3
 
 color: 
   - "#B7BDB4"

@@ -4,7 +4,7 @@ x:
 details: "Web concept, web design, web development, visual identity"
 link: "https://collective-earth.world/"
 
-order: 1
+order: 4
 
 color: 
   - "#5A290B"

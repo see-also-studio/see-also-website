@@ -4,7 +4,7 @@ x:
 details: "Editorial design, web concept, web design, web development, branding"
 link: "https://www.colouring-in.com/"
 
-order: 1
+order: 2
 
 color: 
   - "#ffffff"

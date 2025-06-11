@@ -4,7 +4,7 @@ x: "See, Also × Central Saint Martins (MA Graphic Communication Design)"
 details: "Digital workshops, web design, web development, teaching"
 link: "https://uqjournal.net/"
 
-order: 1
+order: 6
 
 color: 
   - "#ebe2d1"

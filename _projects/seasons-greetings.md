@@ -4,7 +4,7 @@ x:
 details: "Creative direction, web concept, web design, web development"
 link:
 
-order: 1
+order: 8
 
 media: 
   -
