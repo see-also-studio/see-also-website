@@ -61,6 +61,7 @@ body[data-view="project"] {
       position: relative;
       flex-grow: 1;
       min-height: 16em;
+      width: 91%;
 
       @include mq.mq($until: small) {
         margin-left: calc(var(--mobile-margin) * -1);
