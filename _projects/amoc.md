@@ -37,4 +37,5 @@ media:
     href: "projects/amoc/amoc-4.png"
     width: 3750
     height: 2325
+    style: "padding-right: 0; object-position: right center"
 ---
