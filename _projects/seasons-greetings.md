@@ -8,8 +8,8 @@ order: 8
 
 media: 
   -
-    href: "projects/seasons-greetings/seasons-greetings-01.webm"
-    width: 1280
+    href: "projects/seasons-greetings/seasons-greetings-01.mp4"
+    width: 624
     height: 728
-    disableResize: true
+    style: "padding: 0; object-position: left center"
 ---

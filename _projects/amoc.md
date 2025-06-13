@@ -33,4 +33,8 @@ media:
     href: "projects/amoc/amoc-3.png"
     width: 2560
     height: 1600
+  -
+    href: "projects/amoc/amoc-4.png"
+    width: 3750
+    height: 2325
 ---

@@ -22,8 +22,8 @@ media:
     height: 800
     disableResize: true
   -
-    href: "projects/unknown-quantities/unknown-quantities-2.webm"
+    href: "projects/unknown-quantities/unknown-quantities-2.mp4"
     width: 1280
-    height: 800
-    disableResize: true
+    height: 704
+    style: "padding: 0"
 ---
