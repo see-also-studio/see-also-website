@@ -11,6 +11,9 @@
 {%- if include.content.padding & include.content.padding != "" -%}
 {%- assign imageStyles = imageStyles | append: "padding:" | append: include.content.padding | append: ";" -%}
 {%- endif -%}
+{%- if include.content.style -%}
+{%- assign imageStyles = imageStyles | append: include.content.style -%}
+{%- endif -%}
 
 {%- if fileExt == ".jpg" or fileExt == ".jpeg" or fileExt == ".png" or fileExt == ".gif"  -%}
 <img 
@@ -61,6 +64,9 @@
   {% if include.content.title & include.content.title != "" %}
   title="{{ include.content.title }}"
   {% endif %}
+  {% if imageStyles != "" %}
+  style="{{ imageStyles }}"
+  {% endif %}
   autoplay loop muted preload playsinline disablePictureInPicture>
   <source
     src="/assets/{{ include.content.href }}"
@@ -77,6 +83,9 @@
   {% endif %}
   {% if include.content.title & include.content.title != "" %}
   title="{{ include.content.title }}"
+  {% endif %}
+  {% if imageStyles != "" %}
+  style="{{ imageStyles }}"
   {% endif %}
   autoplay loop muted preload playsinline disablePictureInPicture>
   <source
