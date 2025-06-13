@@ -6,6 +6,9 @@ link: "https://nightspace.see-also.com/"
 
 order: 9
 
+color:
+  - "#181818"
+
 media: 
 # Each entry must list file name, height and width, alt text (optional)
 #   -
