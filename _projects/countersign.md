@@ -26,6 +26,8 @@ media:
     href: "projects/countersign/countersign-animations-1.webm"
     height: 1120
     width: 700
+    disableResize: true
+    disableMp4: true
   -
     href: "projects/countersign/countersign3.png"
     height: 1285
