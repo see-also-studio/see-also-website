@@ -50,6 +50,23 @@
   style="{{ imageStyles }}"
   {% endif %}
 >
+{%- elsif fileExt == ".mp4" -%}
+<video
+  {% if include.content.rounded -%}class="rounded"{%- endif %}
+  alt="{{ include.content.alt }}"
+  {% if include.content.width & include.content.width != "" & include.content.height & include.content.height != "" %}
+  width="{{ include.content.width }}"
+  height="{{ include.content.height }}"
+  {% endif %}
+  {% if include.content.title & include.content.title != "" %}
+  title="{{ include.content.title }}"
+  {% endif %}
+  autoplay loop muted preload playsinline disablePictureInPicture>
+  <source
+    src="/assets/{{ include.content.href }}"
+    type="video/mp4"
+  />
+</video>
 {%- elsif fileExt == ".webm" -%}
 <video
   {% if include.content.rounded -%}class="rounded"{%- endif %}
