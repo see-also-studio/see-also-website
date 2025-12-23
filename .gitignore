@@ -20,3 +20,6 @@ node_modules/
 # Compiled assets
 dist/
 dist-images/
+
+!/xmas2024/dist/
+!/xmas2025/dist/
