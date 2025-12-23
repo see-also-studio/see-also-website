@@ -1,0 +1,228 @@
+@use "mq";
+
+$screen-size: (
+  w: 3024,
+  h: 1720,
+  mw: 757,
+  mh: 1353,
+);
+$audio-items: (
+  // 1 pom
+  (
+    x: 43.64,
+    y: 51.56,
+    w: 621.93,
+    h: 695.1,
+    r: -7.68,
+    mx: 53.64,
+    my: 57.3,
+    mw: 279.92,
+    mh: 312.85,
+    mr: -7.68,
+    br: -5,
+  ),
+  // 2 yellow pot
+  (
+    x: 927,
+    y: 39,
+    w: 773,
+    h: 1161,
+    mx: 419,
+    my: 867,
+    mw: 308,
+    mh: 463,
+  ),
+  // 3 star
+  (
+    x: 1876,
+    y: 39,
+    w: 545,
+    h: 612,
+    mx: 259,
+    my: 700,
+    mw: 194,
+    mh: 463,
+    br: 5,
+  ),
+  // 4 pear
+  (
+    x: 2400,
+    y: 75,
+    w: 558,
+    h: 941,
+    mx: -20,
+    my: 746.87,
+    mw: 252.21,
+    mh: 313.09,
+    mr: -32.21,
+    br: -5,
+  ),
+  // 5 handled pot
+  (
+    x: 79,
+    y: 812,
+    w: 733,
+    h: 859,
+    mx: 56,
+    my: 404,
+    mw: 320,
+    mh: 375,
+  ),
+  // 6 round wine jug
+  (
+    x: 788,
+    y: 1188,
+    w: 370,
+    h: 483,
+    mx: 463,
+    my: 568,
+    mw: 199,
+    mh: 261,
+    br: -5,
+  ),
+  // 7 brown wine bottle
+  (
+    x: 1681,
+    y: 651,
+    w: 551,
+    h: 1039,
+    mx: 435,
+    my: 28,
+    mw: 270,
+    mh: 509,
+  ),
+  // 8 anvil
+  (
+    x: 2378,
+    y: 1101,
+    w: 580,
+    h: 565,
+    mx: 34,
+    my: 1071,
+    mw: 266,
+    mh: 259,
+    br: 5,
+  ),
+);
+
+.audio {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+
+  @include mq.mq($until: 690px) {
+    //top: 5%;
+    //bottom: 7%;
+  }
+
+  &__item {
+    position: absolute;
+    transition-property: transform, opacity;
+    transition-duration: 0.2s;
+    will-change: transform, opacity;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .button {
+    transition-property: filter;
+    transition-duration: 400ms;
+    filter: drop-shadow(0 0 1em rgba(82, 18, 4, 0))
+      drop-shadow(0 0 1.5em rgba(82, 18, 4, 0));
+
+    img {
+      //transform: scale(1) rotate(var(--rotation, 0deg));
+      //transition: transform 300ms ease-out;
+      //transition-property: transform;
+      transform: rotate(var(--rotation, 0deg))
+    }
+
+    &[enabled] {
+      filter: drop-shadow(0 0 1em rgba(82, 18, 4, 0.6))
+        drop-shadow(0 0 1.5em rgba(82, 18, 4, 0.4));
+
+      img {
+        //animation: pulse 1.8s ease-out infinite;
+      }
+    }
+
+    &:not([enabled]) {
+      img {
+        //animation: none;
+      }
+    }
+
+    &:active {
+      img {
+        transform: scale(0.95) translateY(0.3em) rotate(calc(var(--rotation, 0deg) - var(--button-rotation, 0deg)));
+      }
+    }
+  }
+}
+
+.audio {
+  &__item {
+    // outline: 1px solid rgba(0,255,0,0.5);
+    
+    @include mq.mq($and: "(orientation: landscape)") {
+      @for $i from 1 through length($audio-items) {
+        $item: nth($audio-items, $i);
+
+        &:nth-child(#{$i}) {
+          width: map-get($item, w) / map-get($screen-size, w) * 100 * 1%;
+          height: map-get($item, h) / map-get($screen-size, h) * 100 * 1%;
+          left: map-get($item, x) / map-get($screen-size, w) * 100 * 1%;
+          top: map-get($item, y) / map-get($screen-size, h) * 100 * 1%;
+
+          @if map-get($item, r) {
+            --rotation: #{map-get($item, r) * 1deg};
+          }
+
+          @if map-get($item, br) {
+            --button-rotation: #{map-get($item, br) * 1deg};
+          }
+        }
+      }
+    }
+
+    @include mq.mq($and: "(orientation: portrait)") {
+      @for $i from 1 through length($audio-items) {
+        $item: nth($audio-items, $i);
+
+        &:nth-child(#{$i}) {
+          width: map-get($item, mw) / map-get($screen-size, mw) * 100 * 1%;
+          height: map-get($item, mh) / map-get($screen-size, mh) * 100 * 1%;
+          left: map-get($item, mx) / map-get($screen-size, mw) * 100 * 1%;
+          top: map-get($item, my) / map-get($screen-size, mh) * 100 * 1%;
+
+          @if map-get($item, mr) {
+            --rotation: #{map-get($item, mr) * 1deg};
+          }
+
+          @if map-get($item, br) {
+            --button-rotation: #{map-get($item, br) * 1deg};
+          }
+        }
+      }
+    }
+  }
+}
+
+body:not(.first-run) {
+  .button {
+    pointer-events: none;
+    //background: rgba(255, 0, 0, 0.2);
+  }
+}
+
+.dots circle:not(.is-hidden) {
+  pointer-events: initial;
+}

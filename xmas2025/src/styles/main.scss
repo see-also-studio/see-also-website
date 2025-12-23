@@ -1,0 +1,94 @@
+@use "inc/reset";
+
+@use "mq";
+@use "inc/fonts";
+@use "inc/layout";
+@use "inc/objects";
+
+:root {
+  --font-family: sans-serif;
+  --font-family--serif: serif;
+  --font-family--sans: sans-serif;
+  --color--foreground: #521204;
+  --color--background: #D6D1C7;
+}
+
+* {
+  touch-action: manipulation;
+  pointer-events: none;
+}
+
+// html {
+//   pointer-events: initial;
+//   cursor: url('../images/cursor.svg') 64 64, auto;
+// }
+
+button {
+  pointer-events: initial;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color--foreground);
+  background-color: var(--color--background);
+  background-image: url('../images/noise.png');
+  background-repeat: repeat;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+  &:not(.first-run) {
+    pointer-events: initial;
+    cursor: pointer;
+  }
+}
+
+main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 100;
+}
+
+hr {
+  border-color: var(--color--foreground);
+  border-style: dashed;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.large-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.message {
+  position: absolute;
+  cursor: grab;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: initial;
+}
+
+* + p,
+* + ul {
+  margin-top: 1rem;
+}
+
+a {
+  color: var(--color--foreground);
+  text-decoration: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+  }
+}

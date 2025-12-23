@@ -1,0 +1,236 @@
+@use "mq";
+@use "fonts";
+
+$screen-size: (
+  w: 3024,
+  h: 1720,
+  mw: 757,
+  mh: 1353,
+);
+
+.large-text {
+  $title-positioning: (
+    // Festive
+    (
+      x: 232,
+      y: 515,
+      w: 843,
+      h: 200,
+      mx: 33,
+      my: 561,
+      mw: 439,
+      mh: 130,
+    ),
+    // Greetings
+    (
+      x: 1312,
+      y: 1175,
+      w: 1146,
+      h: 200,
+      mx: 136,
+      my: 706,
+      mw: 596,
+      mh: 130,
+    ),
+  );
+
+  font-family: 'Inter', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: #{ map-get(nth($title-positioning, 1), w) / map-get($screen-size, w) * 32vw };
+
+  color: #F3F633;
+  //font-size: 6.25em;
+  //font-size: 6.5vw;
+  overflow: hidden;
+  z-index: 150;
+
+  > span {
+    position: absolute;
+    left: var(--left);
+    top: var(--top);
+    //border: 1px solid green;
+
+    &:nth-child(1) {
+      --left: #{ map-get(nth($title-positioning, 1), x) / map-get($screen-size, w) * 100 * 1vw };
+      --top: #{ map-get(nth($title-positioning, 1), y) / map-get($screen-size, h) * 100 * 1vh };
+      width: #{ map-get(nth($title-positioning, 1), w) / map-get($screen-size, w) * 100 * 1vw };
+
+      @include mq.mq($until: 690px) {
+        --left: #{ map-get(nth($title-positioning, 1), mx) / map-get($screen-size, mw) * 100 * 1vw };
+        --top: #{ map-get(nth($title-positioning, 1), my) / map-get($screen-size, mh) * 100 * 1vh };
+        width: #{ map-get(nth($title-positioning, 1), mw) / map-get($screen-size, mw) * 100 * 1vw };
+      }
+    }
+
+    &:nth-child(2) {
+      --left: #{ map-get(nth($title-positioning, 2), x) / map-get($screen-size, w) * 100 * 1vw };
+      --top: #{ map-get(nth($title-positioning, 2), y) / map-get($screen-size, h) * 100 * 1vh };
+      width: #{ map-get(nth($title-positioning, 2), w) / map-get($screen-size, w) * 100 * 1vw };
+
+      @include mq.mq($until: 690px) {
+        --left: #{ map-get(nth($title-positioning, 2), mx) / map-get($screen-size, mw) * 100 * 1vw };
+        --top: #{ map-get(nth($title-positioning, 2), my) / map-get($screen-size, mh) * 100 * 1vh };
+        width: #{ map-get(nth($title-positioning, 2), mw) / map-get($screen-size, mw) * 100 * 1vw };
+      }
+    }
+  }
+
+
+  @include mq.mq($until: 690px) {
+    font-size: #{ map-get(nth($title-positioning, 1), w) / map-get($screen-size, w) * 66vw };
+  }
+}
+
+.dots {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.35));
+
+  > svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.message {
+  --color--bg: #CBC6BC;
+  
+  z-index: 80;
+  font-family: 'Times New Roman', serif;
+  border: 1px solid var(--color--foreground);
+  border-radius: 2.35em;
+  border-style: dashed;
+
+  line-height: 1.1em;
+  overflow: hidden;
+
+  background: var(--color--bg);
+  padding: 1.47em 1.4em 2em 1.5em;
+
+  transform: translate3d(-50%, -50%, 0);
+
+  //top: calc(100% - 7em);
+
+
+  @include mq.mq($until: 690px) {
+    font-size: 3.3vw;
+    width: 14em;
+    min-height: 15em;
+    
+    $message: (
+      // x: 334,
+      x: 275,
+      y: 720,
+      w: 371,
+      h: 453,
+    );
+    $xPercent: map-get($message, x) / (map-get($screen-size, mw) - map-get($message, w)) * 100;
+    $yPercent: map-get($message, y) / (map-get($screen-size, mh) - map-get($message, h)) * 100;
+
+    // left: 1259 / map-get($screen-size, w) * 100 * 1vw;
+    // bottom: 95 / map-get($screen-size, h) * 100 * 1vh;
+    left: $xPercent * 1vw;
+    top: $yPercent * 1vh;
+
+  }
+
+  @include mq.mq($from: 691px) {
+    font-size: 1.3em;
+    width: 16em;
+    min-height: 13.6em;
+
+    $message: (
+      x: 1960,
+      //y: 1067,
+      y: 510,
+      w: 602,
+      h: 558,
+    );
+    $xPercent: map-get($message, x) / (map-get($screen-size, w) - map-get($message, w)) * 100;
+    $yPercent: map-get($message, y) / (map-get($screen-size, h) - map-get($message, h)) * 100;
+
+    //left: (0) / (map-get($screen-size, w)) * 100 * 1vw;
+    //top: 1067 / (map-get($screen-size, h) - 558) * 100 * 1vh;
+    left: $xPercent * 1vw;
+    top: $yPercent * 1vh;
+  }
+
+  &__inner {
+    background-color: var(--color--bg);
+  }
+
+  &__button {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 1.25em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1.2em 1.1em 1.2em 1.5em;
+    
+    &::after {
+      content: "\2191";
+      display: block;
+      transform: rotate(135deg);
+    }
+
+    span {
+      display: block;
+      //transform: rotate(-95deg) scaleX(-100%);
+      outline: none !important;
+    }
+
+    &:active {
+      span {
+        transform: scale(0.9);
+        // transform-origin: bottom right;
+      }
+    }
+  }
+
+  h2 {
+    // font-size: 2.4em;
+    font-size: 0.65em;
+    text-transform: uppercase;
+    // text-align: center;
+    // line-height: 1.1;
+    // margin-top: 0.75em;
+    // margin-bottom: 0.75em;
+  }
+
+  .table {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 0.8em;
+  }
+
+  &__body {
+    max-width: 80%;
+  }
+}
+
+.fade-group__item {
+  opacity: 1;
+  transition: opacity 0ms ease;
+  
+  &.is-hidden {
+    opacity: 0;
+  }
+}
+
+.large-text {
+  .fade-group__item {
+    transition-duration: 600ms;
+  }
+}
