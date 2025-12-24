@@ -144,11 +144,11 @@ $screen-size: (
 
   @include mq.mq($from: 691px) {
     font-size: 1.3em;
-    width: 16em;
+    width: 19.25em;
     min-height: 13.6em;
 
     $message: (
-      x: 1960,
+      x: 1920,
       //y: 1067,
       y: 510,
       w: 602,
