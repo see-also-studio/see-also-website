@@ -19,9 +19,10 @@ media:
 #     width: 600
 #     alt: ""
   -
-    href: "projects/countersign/countersign-2.mp4"
+    href: "projects/countersign/countersign-1.mp4"
     height: 1280
-    width: 722
+    width: 790
+    disableResize: true
   -
     href: "projects/countersign/countersign-animations-1.webm"
     height: 1120
