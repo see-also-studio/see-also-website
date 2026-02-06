@@ -24,6 +24,6 @@ media:
   -
     href: "projects/unknown-quantities/unknown-quantities-2.mp4"
     width: 1280
-    height: 704
+    height: 854
     style: "padding: 0"
 ---
