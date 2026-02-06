@@ -29,8 +29,8 @@ media:
     disableResize: true
     disableMp4: true
   -
-    href: "projects/countersign/countersign3.png"
-    height: 1285
-    width: 2450
-    rounded: true
+    href: "projects/countersign/countersign-3.mp4"
+    height: 1280
+    width: 752
+    disableResize: true
 ---
